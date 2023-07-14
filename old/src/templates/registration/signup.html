@@ -1,0 +1,53 @@
+{% extends "base_header.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block page %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form method="post" id="signup_form">
+        {% csrf_token %}
+        <div class="input_group">
+            <h2>Signup</h2>
+            <hr>
+            <div class="input_unit">
+                <img src="{% static 'pics/square.JPG' %}">
+                <input required name="username" id="username" type="text" placeholder="Username" maxlength="16" minlength="4">
+            </div>
+            <div class="input_unit">
+                <img src="{% static 'pics/square.JPG' %}">
+                <input required name="email" id="email" type="email" placeholder="User@gmail.com">
+            </div>
+            <div class="input_unit">
+                <img src="{% static 'pics/square.JPG' %}">
+                <input required name="password1" id="password1" type="password" placeholder="password" pattern="^(?=.*\d.*\d)(?=.*[a-z])[\w\W]+$" maxlength="22" minlength="8" oninvalid="setCustomValidity('The password must contain at least 1 lowercase and 2 digits.')">
+                <h3>The password must contain at least 8 characters with at least 1 lowercase and 2 digits.</h3>
+            </div>
+            <div class="input_unit">
+                <img src="{% static 'pics/square.JPG' %}">
+                <input required name="password2" id="password2" type="password" placeholder="confirm password" pattern="^(?=.*\d.*\d)(?=.*[a-z])[\w\W]+$" maxlength="22" minlength="8" oninvalid="setCustomValidity('The password must contain at least 1 lowercase and 2 digits.')">
+            </div>
+            <input onclick="checkSimilarity()" type="submit" id="submit" value="Signup" />
+        </div>
+        <a href="{% url 'quotapp:login' %}">Already have an account?</a>
+    </form>
+
+    <script>
+        function checkSimilarity() {
+            var password1 = document.getElementById('password1').value;
+            var password2 = document.getElementById('password2').value;
+
+            if (password1 === password2) {
+
+            } else {
+                alert('Passwords must be identical.');
+            }
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=K2D:300|Fahkwang:300|Kanit:300|DM Sans:400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <!--<div class='head-box'>-->
+    <!--    <div id="menu_icon" onclick="toggleMenu()">menu</div>-->
+    <!--    head-box-->
+    <!--</div>-->
+    <div id="left_section">
+        <!--<div id="left_menu_frame">-->
+            <div id="left_menu">
+                <h1><a href="{% url 'quotapp:home' %}">Quotabook</a></h1>
+                <ul>
+                    <li><a>Profile</a></li>
+                    <li><a href="{% url 'quotapp:quote' %}">Quote</a></li>
+                    <li><a>Book</a></li>
+                    <li><a>Book Shelves</a></li>
+                    <li><a>Writing<a></li>
+                    <li><a href="{% url 'logout' %}?next={% url 'quotapp:home' %}">Log Out</a></li>
+                </ul>
+            </div>
+        <!--</div>-->
+    </div>
+    <div id="right_section">
+        <!--<div id="right_menu_frame">-->
+            <div id="right_menu">
+                <ul>
+                    <li><a href="{% url 'quotapp:quote' %}">Quote</a></li>
+                    <li><a>Book Shelves</a></li>
+                    <li><a>Writing</a></li>
+                </ul>
+            </div>
+        <!--</div>-->
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <script>
+        let menu_frame = document.getElementById("menu_frame");
+
+        function toggleMenu(){
+            menu_frame.classList.toggle("open_menu");
+        }
+    </script>
+</body>
+</html>

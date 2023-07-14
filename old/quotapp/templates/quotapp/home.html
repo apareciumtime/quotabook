@@ -1,0 +1,92 @@
+{% extends "base_header.html" %}
+{% load static %}
+{% load component_tags %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    {% component_css_dependencies %}
+{% endblock %}
+{% block page %}
+    <div id="home">
+        <h1>Quote A Book</h1>
+        <div id="dec_frame">
+            <p>this is quote unit</p>
+            <img src="{% static 'pics/memo_man.png' %}">
+        </div>
+        <div class="tip">
+            <h2>Quote</h2>
+            <div class="tip_content">
+                <ol>
+                    <h3>Basis</h3>
+                    <li>1. step 1</li>
+                    <li>2. step 2</li>
+                    <li>3. step 3</li>
+                    <li>4. step 4</li>
+                    <li>5. step 5</li>
+                </ol>
+                <ul>
+                    <h3>Additions</h3>
+                    <li><a href="{% url 'quotapp:quote' %}">1. extra 1</a></li>
+                    <li><a href="{% url 'quotapp:quote' %}">2. extra 2</a></li>
+                    <li><a href="{% url 'quotapp:quote' %}">3. extra 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tip">
+            <h2>Book Shelf</h2>
+            <div class="tip_content">
+                <ol>
+                    <h3>Basis</h3>
+                    <li>1. step 1</li>
+                    <li>2. step 2</li>
+                    <li>3. step 3</li>
+                    <li>4. step 4</li>
+                    <li>5. step 5</li>
+                </ol>
+                <ul>
+                    <h3>Additions</h3>
+                    <li><a href="{% url 'quotapp:quote' %}">1. extra 1</a></li>
+                    <li><a href="{% url 'quotapp:quote' %}">2. extra 2</a></li>
+                    <li><a href="{% url 'quotapp:quote' %}">3. extra 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tip">
+            <h2>Writing</h2>
+            <div class="tip_content">
+                <ol>
+                    <h3>Basis</h3>
+                    <li>1. step 1</li>
+                    <li>2. step 2</li>
+                    <li>3. step 3</li>
+                    <li>4. step 4</li>
+                    <li>5. step 5</li>
+                </ol>
+                <ul>
+                    <h3>Additions</h3>
+                    <li><a href="{% url 'quotapp:quote' %}">1. extra 1</a></li>
+                    <li><a href="{% url 'quotapp:quote' %}">2. extra 2</a></li>
+                    <li><a href="{% url 'quotapp:quote' %}">3. extra 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tip">
+            <h2>Manage Library</h2>
+            <div class="tip_content">
+                <ol>
+                    <h3>Basis</h3>
+                    <li>1. step 1</li>
+                    <li>2. step 2</li>
+                    <li>3. step 3</li>
+                    <li>4. step 4</li>
+                    <li>5. step 5</li>
+                </ol>
+                <ul>
+                    <h3>Additions</h3>
+                    <li><a href="{% url 'quotapp:quote' %}">1. extra 1</a></li>
+                    <li><a href="{% url 'quotapp:quote' %}">2. extra 2</a></li>
+                    <li><a href="{% url 'quotapp:quote' %}">3. extra 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

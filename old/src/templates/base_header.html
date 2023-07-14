@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=K2D:400|Fahkwang:300|Kanit:300|DM Sans:400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base_header.css' %}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <div id="header">
+        <div id="logo_pic"><a href="{% url 'quotapp:home' %}">Q</a></div>
+        {% if not user.is_authenticated %}
+            <h1>ยินดีต้อนรับสู่ Quotabook</h1>
+            <div id="login_signup">
+                <a href="{% url 'quotapp:login' %}">ลงชื่อเข้าใช้</a>
+                <a href="{% url 'quotapp:signup' %}">สมัครสมาชิก</a>
+            </div>
+        {% else %}
+            <ul>
+                {% component "header_button" dest="Quote" %}
+                {% component "header_button" dest="Book Shelf" %}
+                {% component "header_button" dest="Writing" %}
+                {% component "header_button" dest="Manage Library" %}
+                <!--<li><a href="{% url 'quotapp:quote' %}">Quote</a></li>-->
+                <!--<li><a href="{% url 'quotapp:quote' %}">Book Shelf</a></li>-->
+                <!--<li><a href="{% url 'quotapp:quote' %}">Writing</a></li>-->
+                <!--<li><a href="{% url 'quotapp:quote' %}">Manage Library</a></li>-->
+            </ul>
+            <div id="user_frame">
+                <div id="user_info">
+                    <img src="{% static 'pics/memo_man.png' %}">
+                    <div id="username">
+                        <h1>{{user.username}}</h1>
+                        <h2>{{user.username}}</h2>
+                    </div>
+                </div>
+                <a href="{% url 'quotapp:quote' %}">ตั้งค่าบัญชี</a>
+                <a href="{% url 'logout' %}?next={% url 'quotapp:home' %}">ออกจากระบบ</a>
+            </div>
+        {% endif %}
+    </div>
+    {% block page %}
+    {% endblock %}
+</body>
+</html>
