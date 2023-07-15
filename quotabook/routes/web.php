@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ButtonMenuController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('homepage.home');
 });
+
+Route::get('quoteA', [ButtonMenuController::class,'getQuote'])->name('quote');
+Route::get('book_shelf', [ButtonMenuController::class, 'getBookShelf'])->name('book_shelf');
