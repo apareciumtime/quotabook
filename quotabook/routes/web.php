@@ -18,5 +18,7 @@ Route::get('/', function () {
     return view('homepage.home');
 });
 
-Route::get('quoteA', [ButtonMenuController::class,'getQuote'])->name('quote');
+Route::get('quote', [ButtonMenuController::class,'getQuote'])->name('quote');
 Route::get('book_shelf', [ButtonMenuController::class, 'getBookShelf'])->name('book_shelf');
+Route::get('writing', [ButtonMenuController::class, 'getWriting'])->name('writing');
+Route::get('manage_library', [ButtonMenuController::class, 'getManageLibrary'])->name('manage_library');

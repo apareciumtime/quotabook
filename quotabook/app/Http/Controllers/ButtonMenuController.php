@@ -10,9 +10,20 @@ class ButtonMenuController extends Controller
     {
         return view('quote.quote');
     }
+
     public function getBookShelf()
     {
         return view('bookshelf.bookshelf');
+    }
+
+    public function getWriting()
+    {
+        return view('writing.writing');
+    }
+    
+    public function getManageLibrary()
+    {
+        return view('managelibrary.managelibrary');
     }
 }
 

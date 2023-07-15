@@ -25,6 +25,12 @@ class ButtonMenu extends Component
         else if($label == 'BOOK SHELF'){
             $this->link_to ='book_shelf';
         }
+        else if($label == 'WRITING'){
+            $this->link_to ='writing';
+        }
+        else if($label == 'MANAGE LIBRARY'){
+            $this->link_to ='manage_library';
+        }
     }
     
 

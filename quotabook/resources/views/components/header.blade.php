@@ -36,6 +36,8 @@
     </a>
     <x-button-menu label="QUOTE"/>
     <x-button-menu label="BOOK SHELF"/>
+    <x-button-menu label="WRITING"/>
+    <x-button-menu label="MANAGE LIBRARY"/>
 </div>
 
 @yield('body')
