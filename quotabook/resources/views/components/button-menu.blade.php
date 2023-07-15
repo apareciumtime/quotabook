@@ -6,6 +6,7 @@
     border-radius: 4px;
     border-bottom: 2px solid var(--click, #CAC0A8);
     background-color: #FEFEFE;
+    /* border: 1px red solid; */
 }
 
 .button_menu_box_label{
@@ -16,6 +17,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    /* border: 1px red solid; */
 }
 
 </style>

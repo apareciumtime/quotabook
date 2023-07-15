@@ -1,1 +1,1 @@
-quote hello
+@extends('components.header')
