@@ -109,6 +109,14 @@
             /* border: 1px red solid; */
         }
 
+        .menu:hover{
+            color:#FFC329;
+        }
+
+        .menu:active{
+            color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
+        }
+
         .body_box {
             display: flex;
             flex-direction: column;
@@ -119,9 +127,7 @@
     </style>
 </head>
 <body>
-<!-- @if (Auth::guest())
-hello
-@else -->
+    
     <div class="header_box">
         <a href="/">
             <div class="header_box_logo">
@@ -131,6 +137,13 @@ hello
                 </svg>
             </div>
         </a>
+    @if (Auth::guest()) 
+    <a href="{{ url('auth/google') }}">
+        <div class="menu">
+            ลงชื่อเข้าใช้
+        </div>
+    </a>
+    @else
         <div class="header_box_menu_list">
             <x-button-menu label="QUOTE"/>
             <x-button-menu label="BOOK SHELF"/>
@@ -155,13 +168,15 @@ hello
                 <div class="menu">
                     ตั้งค่าบัญชีผู้ใช้
                 </div>
-                <div class="menu">
-                    ออกจากระบบ
-                </div>
+                <a href="{{url('logout')}}">
+                    <div class="menu">
+                        ออกจากระบบ
+                    </div>
+                </a>
             </div>
         </div>
     </div>
-    <!-- @endif -->
+    @endif
 
     <div class="body_box">
         @yield('body')
