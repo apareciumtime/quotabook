@@ -4,16 +4,25 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Quote extends Component
+class Icon extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+
+    public $icon;
+    public $link_to;
+    public function __construct($icon)
     {
-        //
+        $this->icon = $icon;
+
+        if ($icon == "edit") {
+            $this->link_to = "quote";
+        } else {
+            $this->link_to = "quote";
+        }
     }
 
     /**
@@ -23,6 +32,6 @@ class Quote extends Component
      */
     public function render()
     {
-        return view('components.quote');
+        return view('components.icon');
     }
 }
