@@ -181,7 +181,7 @@
             </div>
 
             <div id="quote_frame">
-                <x-quote-item content="This is content">
+                <x-quote-item content="This is content"/>
             </div>
         </div>
 @endsection

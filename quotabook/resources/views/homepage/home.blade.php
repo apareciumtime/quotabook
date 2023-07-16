@@ -3,6 +3,6 @@
 
 @section('body')
 
-helloWorld
+<a href="{{url('logout')}}">logout</a>
 
 @endsection

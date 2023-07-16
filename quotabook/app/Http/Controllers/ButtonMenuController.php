@@ -25,5 +25,10 @@ class ButtonMenuController extends Controller
     {
         return view('managelibrary.managelibrary');
     }
+
+    public function getLogin()
+    {
+        return view('auth.login');
+    }
 }
 
