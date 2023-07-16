@@ -16,6 +16,11 @@ class CreateQuotesTable extends Migration
         Schema::create('quotes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('book');
+            $table->longText('quote');
+            $table->text('chapter');
+            $table->text('page');
+            $table->text('comment');
         });
     }
 

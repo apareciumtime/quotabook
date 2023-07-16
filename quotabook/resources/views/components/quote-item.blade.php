@@ -18,7 +18,7 @@
         <x-icon icon="bookmark"/>
     </div>
     <div class="quote_item_body">
-        <p>$content</p>
+        <p>{{$content}}</p>
     </div>
     <div class="quote_item_icon">
         <x-icon icon="edit"/>
