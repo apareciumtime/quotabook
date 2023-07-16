@@ -6,8 +6,6 @@
         <link rel = "stylesheet" href = "/css/home.css">
     <style>
         body{
-            min-width: 1000px;
-
             margin:0;
             font-family: "K2D";
             /* border: 1px red solid; */
@@ -17,14 +15,13 @@
         }
 
         .header_box{
-            display: flex;
-            padding: 16px 32px;
-            /* justify-content:left; */
-            /* align-items: center; */
-            gap: 32px;
-            align-self: stretch;
-            background-color: #F0F0F0;;
-            border: 1px red solid;
+            display:flex;
+            padding: 4px 32px;
+            align-items: center;
+            background-color: #F0F0F0;
+            gap:32px;
+            min-width: fit-content;
+            /* border: 1px red solid; */
         }
         .header_box_menu_list{
             display: flex;
@@ -33,52 +30,91 @@
             gap:32px;
             align-self: stretch;
             flex: 1 0 0;
-            border: 1px red solid;
+            /* border: 1px red solid; */
         }
-        
+
         .header_box_user_bar{
-            
-            border: 1px red solid;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            /* border: 1px red solid; */
         }
 
         .user_bar_profilePic_name{
-            border: 1px red solid;
+            display: flex;
+            gap: 8px;
+            /* border: 1px red solid; */
         }
         
         .profilePic{
-            border: 1px red solid;
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            background: var(--font-white, #EAEAEA);
+            /* border: 1px red solid; */
         }
 
         .name{
-            border: 1px red solid;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            overflow: hidden;
+            color: var(--font-primary-black, #0E0E0E);
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            /* border: 1px red solid; */
         }
 
         .displayname{
-            border: 1px red solid;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            /* border: 1px red solid; */
         }
 
         .username{
-            border: 1px red solid;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+
+            overflow: hidden;
+            color: rgba(14, 14, 14, 0.20);
+
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            /* border: 1px red solid; */
         }
 
         .user_bar_menu{
-            border: 1px red solid;  
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            /* border: 1px red solid;   */
         }
 
         .menu{
-            border: 1px red solid;
+            color: var(--click, #CAC0A8);
+
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            /* border: 1px red solid; */
         }
 
         .body_box {
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            width: unset;
-            height: unset;
-            padding: 0;
-
-            font-family: "K2D";
+            min-width: 90vw;
+            /* border: 1px blue solid; */
         }
     </style>
 </head>
@@ -108,19 +144,19 @@ hello
                 </div>
                 <div class="name">
                     <div class="displayname">
-
+                        Displayname
                     </div>
                     <div class="username">
-
+                        @username
                     </div>
                 </div>
             </div>
             <div class="user_bar_menu">
                 <div class="menu">
-
+                    ตั้งค่าบัญชีผู้ใช้
                 </div>
                 <div class="menu">
-                    
+                    ออกจากระบบ
                 </div>
             </div>
         </div>
