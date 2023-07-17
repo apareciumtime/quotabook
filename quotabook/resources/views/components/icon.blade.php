@@ -26,7 +26,7 @@
 
         padding: 8px;
 
-        /* background: red; */
+        background: #FFF;
         border-radius: 12px;
         border: 3px solid var(--click, #CAC0A8);
     }
@@ -39,6 +39,7 @@
 
         padding: 4px;
 
+        background: #FFF;
         border-radius: 4px;
         border: 2px solid var(--click, #CAC0A8);
     }

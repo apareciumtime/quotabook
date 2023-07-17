@@ -16,12 +16,12 @@
         flex-direction: row;
         align-items: center;
 
-        width: 30vw;
+        width: 358px;
         /* height: 100vh; */
         padding: 0;
 
         gap: 5%;
-            /* background: lightseagreen; */
+        /* background: lightseagreen; */
     }
 
     #paginate_bar_middle_group {
@@ -46,7 +46,7 @@
         align-items: center;
         justify-content: flex-end;
 
-        width: 30vw;
+        width: 358px;
         /* height: 100vh; */
         padding: 0;
         gap: 5%;
@@ -73,8 +73,8 @@
         display: flex;
         justify-content: center;
 
-        width: 20vw;
-        min-width: 200px;
+        width: ;
+        /* min-width: 200px; */
         padding: 0;
         margin: 0;
 

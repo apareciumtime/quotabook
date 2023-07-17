@@ -29,7 +29,7 @@ Route::get('logout',[ProviderController::class,'logoutWithGoogle']);
 // Home
 Route::get('/', function () {
     return view('homepage.home');
-});
+})->name('home');
 
 // Quote Routes
 Route::get('quote', [QuoteController::class,'getQuote'])->name('quote');
