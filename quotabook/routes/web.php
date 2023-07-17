@@ -28,8 +28,6 @@ Route::get('auth/google/callback', [ProviderController::class,'loginWithGoogle']
 
 Route::get('logout',[ProviderController::class,'logoutWithGoogle']);
 
-Route::get('login', [ButtonMenuController::class, 'getLogin'])->name('login');
-
  
 Route::get('/auth/callback', function () {
     $user = Socialite::driver('google')->user();
