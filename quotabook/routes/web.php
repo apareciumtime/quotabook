@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\Auth\ProviderController;
-use App\Http\Controllers\ButtonMenuController;
+use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\BookShelfController;
+use App\Http\Controllers\WritingController;
+use App\Http\Controllers\ManageLibraryController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -23,29 +26,41 @@ use Laravel\Socialite\Facades\Socialite;
 // Route::get('auth/google/', [ProviderController::class,'redirect']);
 // Route::get('auth/google/callback', [ProviderController::class,'callback']);
 
+// Google Routes
 Route::get('auth/google', [ProviderController::class,'googleRedirect']);
 Route::get('auth/google/callback', [ProviderController::class,'loginWithGoogle']);
 
 Route::get('logout',[ProviderController::class,'logoutWithGoogle']);
-
 Route::get('login', [ButtonMenuController::class, 'getLogin'])->name('login');
 
- 
 Route::get('/auth/callback', function () {
     $user = Socialite::driver('google')->user();
- 
+
     // $user->token
 });
 
 
+// Home
 Route::get('/', function () {
     return view('homepage.home');
 });
 
-Route::get('quote', [ButtonMenuController::class,'getQuote'])->name('quote');
-Route::get('book_shelf', [ButtonMenuController::class, 'getBookShelf'])->name('book_shelf');
-Route::get('writing', [ButtonMenuController::class, 'getWriting'])->name('writing');
-Route::get('manage_library', [ButtonMenuController::class, 'getManageLibrary'])->name('manage_library');
+// Quote Routes
+Route::get('quote', [QuoteController::class,'getQuote'])->name('quote');
+Route::get('quote/{id}', [QuoteController::class,'getQuoteDetail'])->name('quote_detail');
+Route::get('quote/create', [QuoteController::class,'getQuoteCreate'])->name('quote_create');
+// Route::get('quote/{id}/update', [QuoteController::class,'getQuoteUpdate'])->name('quote_detail');
 
 
- 
+// BookShelf Routes
+Route::get('book_shelf', [BookShelfController::class, 'getBookShelf'])->name('book_shelf');
+
+
+// Writing Routes
+Route::get('writing', [WritingController::class, 'getWriting'])->name('writing');
+
+
+// ManageLibrary Routes
+Route::get('manage_library', [ManageLibraryController::class, 'getManageLibrary'])->name('manage_library');
+
+

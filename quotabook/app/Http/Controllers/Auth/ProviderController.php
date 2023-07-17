@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
-use App\Models\User; 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
@@ -16,10 +16,10 @@ class ProviderController extends Controller
     public function loginWithGoogle()
     {
         try {
-    
+
             $user = Socialite::driver('google')->user();
             $existingUser = User::where('email', $user->email)->first();
-     
+
             if($existingUser){
                 Auth::login($existingUser);
                 return redirect('/');
@@ -34,7 +34,7 @@ class ProviderController extends Controller
                 Auth::login($createUser);
                 return redirect('/');
             }
-    
+
         } catch (\Throwable $th) {
           throw $th;
        }
@@ -46,5 +46,5 @@ class ProviderController extends Controller
         return redirect('/');
     }
 
-    
+
 }

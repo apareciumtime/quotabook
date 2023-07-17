@@ -32,7 +32,7 @@ class ButtonMenu extends Component
             $this->link_to ='manage_library';
         }
     }
-    
+
 
     /**
      * Get the view / contents that represent the component.

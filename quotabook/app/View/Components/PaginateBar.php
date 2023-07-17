@@ -3,19 +3,18 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Models\Quote;
 
-class QuoteItem extends Component
+class PaginateBar extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public $quote;
-    public function __construct($id)
+    public $choice;
+    public function __construct($choice)
     {
-        $this->quote = Quote::find($id);
+        $this->choice = $choice;
     }
 
     /**
@@ -25,6 +24,6 @@ class QuoteItem extends Component
      */
     public function render()
     {
-        return view('components.quote-item');
+        return view('components.paginate-bar');
     }
 }
