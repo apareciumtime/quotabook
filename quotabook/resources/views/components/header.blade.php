@@ -8,37 +8,40 @@
         body{
             margin:0;
             font-family: "K2D";
+            /* min-width: 1000px; */
             /* border: 1px red solid; */
         }
         a{
             text-decoration: none;
         }
-        .header_box_guest{
-            display:flex;
-            height: 96px;
-            padding: 0px 32px;
-            align-items: center;
-            justify-content: center;
-            background-color: #F0F0F0;
-            gap:32px;
-            min-width: fit-content;
+
+        .header_box_logo{
+            width: 4.76vw;
+            height: 4.76vw;
+        }
+
+        .header_box_logo svg{
+            width: 100%;
+            height: 100%;
+
         }
 
         .header_box{
-            display:flex;
-            padding: 4px 32px;
+            display: flex;
+            height: 7.67vw;
+            flex-grow: 1;
+            padding: 0.15vw 2.12vw;
+            justify-content:left;
             align-items: center;
-            justify-content: center;
-            background-color: #F0F0F0;
-            gap:32px;
-            min-width: fit-content;
-            /* border: 1px red solid; */
+            gap: 2.11vw;
+            align-self: stretch;
+            background: #F0F0F0;
         }
         .header_box_menu_list{
             display: flex;
             justify-content:center;
             align-items: center;
-            gap:32px;
+            gap:2.11vw;
             align-self: stretch;
             flex: 1 0 0;
             /* border: 1px red solid; */
@@ -58,9 +61,9 @@
         }
         
         .profilePic{
-            width: 28px;
-            height: 28px;
-            border-radius: 4px;
+            width: 1.85vw;
+            height: 1.85vw;
+            border-radius: .26vw;
             background: var(--font-white, #EAEAEA);
             /* border: 1px red solid; */
         }
@@ -68,12 +71,12 @@
         .name{
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 0.26vw;
 
             overflow: hidden;
             color: var(--font-primary-black, #0E0E0E);
 
-            font-size: 16px;
+            font-size: 1.05vw;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -85,6 +88,10 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
+            font-size: 1.05vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
             /* border: 1px red solid; */
         }
 
@@ -96,7 +103,7 @@
             overflow: hidden;
             color: rgba(14, 14, 14, 0.20);
 
-            font-size: 14px;
+            font-size: .92vw;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -106,14 +113,14 @@
         .user_bar_menu{
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: .53vw;
             /* border: 1px red solid;   */
         }
 
         .menu{
             color: var(--click, #CAC0A8);
 
-            font-size: 12px;
+            font-size: .79vw;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -128,28 +135,35 @@
             color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
         }
 
-        .body_box {
+        .body_box{
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 4.23vw;
+            align-self: stretch;
+            padding:2.11vw 8.46vw;
+            /* border: 1px red solid; */
         }
 
         .welcoming{
             display: flex;
             justify-content: center;
             align-items: center;
-            flex: 1 0 0;
-            /* align-self: stretch; */
+            /* flex: 1 0 0; */
+            flex-grow: 1;
+            align-self: stretch;
 
             color: var(--click, #CAC0A8);
-            font-size: 24px;
-            /* border:1px red solid; */
+            font-size: 1.58vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
         }
     </style>
 </head>
 <body>
     @if (Auth::guest()) 
-    <div class="header_box_guest">
+    <div class="header_box">
         <a href="/">
             <div class="header_box_logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">

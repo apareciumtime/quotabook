@@ -4,13 +4,12 @@
         display: inline-block;
 
         justify-content: center;
-        padding: 4px 48px;
-        border-radius: 4px;
-        border-bottom: 2px solid var(--click, #CAC0A8);
+        padding: 0.4vw 4.23vw;
+        border-radius: .26vw;
+        border-bottom: .13vw solid var(--click, #CAC0A8);
         background-color: #FEFEFE;
 
-        font-family: "K2D";
-        font-size: 24px;
+        font-size: 1.58vw;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -18,13 +17,13 @@
     }
 
     .button_menu_box:hover{
-        border-bottom: 2px solid var(--click, #CAC0A8);
+        border-bottom: .13vw solid var(--click, #CAC0A8);
         background: var(--click, #CAC0A8);
         color: var(--font-white, #EAEAEA);
     }
 
     .button_menu_box:active{
-        border-bottom: 2px solid var(--click, #CAC0A8);
+        border-bottom: .13vw solid var(--click, #CAC0A8);
         background: var(--font-white, #EAEAEA);
         color: var(--click, #CAC0A8);
     }

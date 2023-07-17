@@ -1,14 +1,12 @@
 <style>
     #paginate_bar {
         display: flex;
-        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        justify-items: flex-start;
+        gap: 4.23vw;
+        align-self: stretch;
 
-        width: 100%;
-        padding: 0;
-
-            /* background: blue; */
+        background: blue;
     }
 
     #paginate_bar_left_group {
@@ -16,12 +14,9 @@
         flex-direction: row;
         align-items: center;
 
-        width: 358px;
-        /* height: 100vh; */
-        padding: 0;
-
-        gap: 5%;
-        /* background: lightseagreen; */
+        width: 10vw;
+        gap:.8vw;
+        background: lightseagreen;
     }
 
     #paginate_bar_middle_group {
@@ -29,15 +24,12 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        flex-grow: 1;
 
-        width: unset;
-        /* height: 100vh; */
-        padding: 0;
-        margin: 0;
 
-        gap: 64px;
+        gap: 2.11vw;
 
-        /* background: seagreen; */
+        background: seagreen;
     }
 
     #paginate_bar_right_group {
@@ -46,12 +38,9 @@
         align-items: center;
         justify-content: flex-end;
 
-        width: 358px;
-        /* height: 100vh; */
-        padding: 0;
-        gap: 5%;
+        width: 10vw;
 
-        /* background: lightseagreen; */
+        background: lightseagreen;
     }
 
     /* quote_bar_2 1/2 */
@@ -66,17 +55,12 @@
         display: flex;
         flex-direction: row;
 
-        gap: 4px;
+        gap: .26vw;
     }
 
     #paginate_bar_middle_text_group {
         display: flex;
         justify-content: center;
-
-        width: ;
-        /* min-width: 200px; */
-        padding: 0;
-        margin: 0;
 
         /* background: red; */
     }

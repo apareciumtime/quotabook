@@ -1,21 +1,10 @@
 <style>
 
-
-.playground{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 64px;
-    align-self: stretch;
-    padding:32px 128px;
-    /* border: 1px red solid; */
-}
-
 .quotabook{
     color: var(--click, #CAC0A8);
     text-align: center;
 
-    font-size: 32px;
+    font-size: 2.11vw;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
@@ -24,7 +13,7 @@
 
 .quoter_today{
     width: 100%;
-    height: 256px;
+    max-height: 16.93vw;
     /* border: 1px red solid; */
 
     display: flex;
@@ -36,54 +25,58 @@
 
 .quoter_today_box{
     display: flex;
-    width: 400px;
-    padding: 32px;
+    width: 26.45vw;
+    max-height: 16.93vw;
+    padding: 2.11vw;
     justify-content: center;
     align-items: center;
-    border-radius: 20px 20px 0px 20px;
-    border: 4px solid var(--click, #CAC0A8);
+    border-radius: 1.32vw 1.32vw 0px 1.32vw;
+    border: .26vw solid var(--click, #CAC0A8);
     
     color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
-    font-size: 18px;
+    font-size: 1.19vw;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 1.85vw;
     letter-spacing: 0.36px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .quoter_today_picture{
-    width: 223.79px;
-    height: 256px;
+    width: 14.8vw;
+    height: 16.93vw;
     /* border: 1px red solid; */
 }
 
 .quoter_today_picture img{
-    width: 100%;
-    height: 100%;
+    width: 14.8vw;
+    height: 16.93vw;
 }
 
 .content{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 64px;
+    gap: 4.23vw;
     align-self: stretch;
-    /* border: 1px red solid; */
+    border: 1px red solid;
 }
 
 .whole_block{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 1.05vw;
     align-self: stretch;
     /* border: 1px red solid; */
 }
 
 .topic_block{
-    padding:0px 16px;
-    color: var(--font-primary-black, #0E0E0E);
-    font-size: 24px;
+    padding:0px 2.11vw;
+    color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
+    font-size: 1.58vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -93,32 +86,44 @@
 
 .block{
     display: flex;
-    padding: 32px;
+    flex-direction: column;
+    padding: 2.11vw 1.05vw;
     justify-content: center;
     align-items: flex-start;
-    gap: 16px;
+    gap: 1.05vw;
     align-self: stretch;
 
-    border-radius: 4px;
-    border: 4px solid var(--click, #CAC0A8);
+    border-radius: 0.26vw;
+    border: 0.26vw solid var(--click, #CAC0A8);
 
     /* border: 1px red solid; */
 }
 
 .block_column{
     display: flex;
+    padding: 0px 2.11vw;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.05vw;
+    align-self: stretch;
+}
+
+.block_column_each{
+    display: flex;
+    padding: 1.05vw 2.11vw;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 1.58vw;
     flex: 1 0 0;
+    align-self: stretch;
 
     /* border: 1px red solid; */
 }
 
 .block_column_topic{
-    color: var(--font-primary-black, #0E0E0E);
+    color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
 
-    font-size: 18px;
+    font-size: 1.19vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -127,7 +132,7 @@
 .block_column_list{
     color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
 
-    font-size: 14px;
+    font-size: .92vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -139,7 +144,7 @@
 .block_column_list_underline{
     color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
 
-    font-size: 14px;
+    font-size: .92vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -151,7 +156,7 @@
 .block_column_list_each{
     color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
 
-    font-size: 14px;
+    font-size: .92vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -167,7 +172,6 @@
 
 
 @section('body')
-<div class="playground">
     <div class="quotabook">
         QuotabooK
     </div>
@@ -182,160 +186,161 @@
     </div>
     <div class="content">
         <div class="whole_block">
-            <div class="topic_block">
-                Quote โควต
-            </div>
             <div class="block">
-                <div class="block_column">
-                    <div class="block_column_topic">
-                        วิธีการใช้งานเบื้องต้น
-                    </div>
-                    <div class="block_column_list">
-                        <div class="block_column_list_each">
-                            1. 
-                        </div>
-                        <div class="block_column_list_each">
-                            2. 
-                        </div>
-                    </div>
+                <div class="topic_block">
+                    Quote โควต
                 </div>
-
                 <div class="block_column">
-                    <div class="block_column_topic">
-                        การใช้งานอื่น ๆ
+                    <div class="block_column_each">
+                        <div class="block_column_topic">
+                            วิธีการใช้งานเบื้องต้น
+                        </div>
+                        <div class="block_column_list">
+                            <div class="block_column_list_each">
+                                1. 
+                            </div>
+                            <div class="block_column_list_each">
+                                2. 
+                            </div>
+                        </div>
                     </div>
-                    <div class="block_column_list_underline">
-                        <a href="#">
-                        <div class="block_column_list_each">
-                            1. 
+                    <div class="block_column_each">
+                        <div class="block_column_topic">
+                            การใช้งานอื่น ๆ
                         </div>
-                        </a>
-                        <a href="#">
-                        <div class="block_column_list_each">
-                            2. 
+                        <div class="block_column_list_underline">
+                            <a href="#">
+                            <div class="block_column_list_each">
+                                1. 
+                            </div>
+                            </a>
+                            <a href="#">
+                            <div class="block_column_list_each">
+                                2. 
+                            </div>
+                            </a>
                         </div>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="whole_block">
-            <div class="topic_block">
-                Book Shelf ชั้นวางหนังสือ
-            </div>
             <div class="block">
-                <div class="block_column">
-                    <div class="block_column_topic">
-                        วิธีการใช้งานเบื้องต้น
-                    </div>
-                    <div class="block_column_list">
-                        <div class="block_column_list_each">
-                            1. 
-                        </div>
-                        <div class="block_column_list_each">
-                            2. 
-                        </div>
-                    </div>
+                <div class="topic_block">
+                    Book Shelf ชั้นวางหนังสือ
                 </div>
-
                 <div class="block_column">
-                    <div class="block_column_topic">
-                        การใช้งานอื่น ๆ
+                    <div class="block_column_each">
+                        <div class="block_column_topic">
+                            วิธีการใช้งานเบื้องต้น
+                        </div>
+                        <div class="block_column_list">
+                            <div class="block_column_list_each">
+                                1. 
+                            </div>
+                            <div class="block_column_list_each">
+                                2. 
+                            </div>
+                        </div>
                     </div>
-                    <div class="block_column_list_underline">
-                        <a href="#">
-                        <div class="block_column_list_each">
-                            1. 
+                    <div class="block_column_each">
+                        <div class="block_column_topic">
+                            การใช้งานอื่น ๆ
                         </div>
-                        </a>
-                        <a href="#">
-                        <div class="block_column_list_each">
-                            2. 
+                        <div class="block_column_list_underline">
+                            <a href="#">
+                            <div class="block_column_list_each">
+                                1. 
+                            </div>
+                            </a>
+                            <a href="#">
+                            <div class="block_column_list_each">
+                                2. 
+                            </div>
+                            </a>
                         </div>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="whole_block">
-            <div class="topic_block">
-                Writing มุมขีดเขียน
-            </div>
             <div class="block">
-                <div class="block_column">
-                    <div class="block_column_topic">
-                        วิธีการใช้งานเบื้องต้น
-                    </div>
-                    <div class="block_column_list">
-                        <div class="block_column_list_each">
-                            1. 
-                        </div>
-                        <div class="block_column_list_each">
-                            2. 
-                        </div>
-                    </div>
+                <div class="topic_block">
+                    Writing มุมขีดเขียน
                 </div>
-
                 <div class="block_column">
-                    <div class="block_column_topic">
-                        การใช้งานอื่น ๆ
+                    <div class="block_column_each">
+                        <div class="block_column_topic">
+                            วิธีการใช้งานเบื้องต้น
+                        </div>
+                        <div class="block_column_list">
+                            <div class="block_column_list_each">
+                                1. 
+                            </div>
+                            <div class="block_column_list_each">
+                                2. 
+                            </div>
+                        </div>
                     </div>
-                    <div class="block_column_list_underline">
-                        <a href="#">
-                        <div class="block_column_list_each">
-                            1. 
+                    <div class="block_column_each">
+                        <div class="block_column_topic">
+                            การใช้งานอื่น ๆ
                         </div>
-                        </a>
-                        <a href="#">
-                        <div class="block_column_list_each">
-                            2. 
+                        <div class="block_column_list_underline">
+                            <a href="#">
+                            <div class="block_column_list_each">
+                                1. 
+                            </div>
+                            </a>
+                            <a href="#">
+                            <div class="block_column_list_each">
+                                2. 
+                            </div>
+                            </a>
                         </div>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="whole_block">
-            <div class="topic_block">
-                Manage Library จัดการห้องสมุด
-            </div>
             <div class="block">
-                <div class="block_column">
-                    <div class="block_column_topic">
-                        วิธีการใช้งานเบื้องต้น
-                    </div>
-                    <div class="block_column_list">
-                        <div class="block_column_list_each">
-                            1. 
-                        </div>
-                        <div class="block_column_list_each">
-                            2. 
-                        </div>
-                    </div>
+                <div class="topic_block">
+                    Manage Library จัดการห้องสมุด
                 </div>
-
                 <div class="block_column">
-                    <div class="block_column_topic">
-                        การใช้งานอื่น ๆ
+                    <div class="block_column_each">
+                        <div class="block_column_topic">
+                            วิธีการใช้งานเบื้องต้น
+                        </div>
+                        <div class="block_column_list">
+                            <div class="block_column_list_each">
+                                1. 
+                            </div>
+                            <div class="block_column_list_each">
+                                2. 
+                            </div>
+                        </div>
                     </div>
-                    <div class="block_column_list_underline">
-                        <a href="#">
-                        <div class="block_column_list_each">
-                            1. 
+                    <div class="block_column_each">
+                        <div class="block_column_topic">
+                            การใช้งานอื่น ๆ
                         </div>
-                        </a>
-                        <a href="#">
-                        <div class="block_column_list_each">
-                            2. 
+                        <div class="block_column_list_underline">
+                            <a href="#">
+                            <div class="block_column_list_each">
+                                1. 
+                            </div>
+                            </a>
+                            <a href="#">
+                            <div class="block_column_list_each">
+                                2. 
+                            </div>
+                            </a>
                         </div>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
-
-
-</div>
 
 
 @endsection

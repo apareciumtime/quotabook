@@ -5,13 +5,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 4.23vw;
+        align-self: stretch;
+        border: 1px red solid;
 
-        width: unset;
-        height: unset;
-        padding: 32px 128px;
-        margin-top: 1.5%;
 
-        /* background: pink; */
+        background: pink;
     }
 
     #quote_frame {
@@ -22,8 +21,8 @@
 
         width:unset;
         height: unset;
-        margin-top: 5vh;
-        gap:16px;
+        /* margin-top: 5vh; */
+        gap:1.05vw;
         /* background: green; */
     }
 </style>
