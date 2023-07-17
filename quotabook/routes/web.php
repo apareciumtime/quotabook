@@ -19,24 +19,11 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-/*login*/
-// Route::get('/auth/{provider}/redirect', [ProviderController::class,'redirect']);
-// Route::get('/auth/{provider}/callback', [ProviderController::class,'callback']);
-
-// Route::get('auth/google/', [ProviderController::class,'redirect']);
-// Route::get('auth/google/callback', [ProviderController::class,'callback']);
-
 // Google Routes
 Route::get('auth/google', [ProviderController::class,'googleRedirect']);
 Route::get('auth/google/callback', [ProviderController::class,'loginWithGoogle']);
 
 Route::get('logout',[ProviderController::class,'logoutWithGoogle']);
-
-Route::get('/auth/callback', function () {
-    $user = Socialite::driver('google')->user();
-
-    // $user->token
-});
 
 
 // Home
