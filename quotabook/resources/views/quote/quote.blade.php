@@ -7,10 +7,9 @@
         align-items: center;
         gap: 4.23vw;
         align-self: stretch;
-        border: 1px red solid;
 
 
-        background: pink;
+        /* background: pink; */
     }
 
     #quote_frame {

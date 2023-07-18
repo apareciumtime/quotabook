@@ -20,7 +20,17 @@ class QuoteController extends Controller
     public function getQuoteCreate() {
         return view('quote.quote_create');
     }
+    public function postQuoteCreate(Request $request) {
 
+        $validation = $request->validateWithBag('post', [
+            'quote' => ['required'],
+            'book' => ['required'],
+            'chapter' => ['required'],
+            'page' => ['required'],
+        ]);
+
+        return redirect()->route('quote');
+    }
     // public function getQuoteUpdate($id) {
     //     $quote = Quote::find($id);
     //     return view('quote.quote_update')->with('quote', $quote);

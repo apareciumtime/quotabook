@@ -23,7 +23,6 @@
         .header_box_logo svg{
             width: 100%;
             height: 100%;
-
         }
 
         .header_box{
@@ -59,7 +58,7 @@
             gap: 8px;
             /* border: 1px red solid; */
         }
-        
+
         .profilePic{
             width: 1.85vw;
             height: 1.85vw;
@@ -162,7 +161,7 @@
     </style>
 </head>
 <body>
-    @if (Auth::guest()) 
+    @if (Auth::guest())
     <div class="header_box">
         <a href="/">
             <div class="header_box_logo">
@@ -229,5 +228,5 @@
     </div>
     @endif
 
-    
+
 </body>

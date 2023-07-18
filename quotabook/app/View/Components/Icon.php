@@ -14,15 +14,18 @@ class Icon extends Component
 
     public $icon;
     public $link_to;
-    public function __construct($icon)
+    public function __construct($icon, $link_to = "quote_create")
     {
         $this->icon = $icon;
+        $this->link_to = $link_to;
 
-        if ($icon == "edit") {
-            $this->link_to = "quote";
-        } else {
-            $this->link_to = "quote";
-        }
+        // if ($link_to == "quote") {
+        //     $this->link_to = "quote_create";
+        // } elseif ($link_to == "book") {
+        //     $this->link_to = "quote1";
+        // } else {
+        //     $this->link_to = "quote";
+        // }
     }
 
     /**

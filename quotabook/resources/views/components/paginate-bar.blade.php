@@ -6,7 +6,7 @@
         gap: 4.23vw;
         align-self: stretch;
 
-        background: blue;
+        /* background: blue; */
     }
 
     #paginate_bar_left_group {
@@ -16,7 +16,7 @@
 
         width: 10vw;
         gap:.8vw;
-        background: lightseagreen;
+        /* background: lightseagreen; */
     }
 
     #paginate_bar_middle_group {
@@ -29,7 +29,7 @@
 
         gap: 2.11vw;
 
-        background: seagreen;
+        /* background: seagreen; */
     }
 
     #paginate_bar_right_group {
@@ -39,8 +39,8 @@
         justify-content: flex-end;
 
         width: 10vw;
-
-        background: lightseagreen;
+        gap:.8vw;
+        /* background: lightseagreen; */
     }
 
     /* quote_bar_2 1/2 */
