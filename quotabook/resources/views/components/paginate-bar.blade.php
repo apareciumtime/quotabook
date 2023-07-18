@@ -123,6 +123,8 @@
             <x-icon icon="edit"/>
             <x-icon icon="delete"/>
         @elseif($choice === "bookshelf")
+            <x-icon icon="shelf_create"/>
+            <x-icon icon="create"/>
         @elseif($choice === "bookshelf_detail")
         @elseif($choice === "book")
         @elseif($choice === "book_detail")
