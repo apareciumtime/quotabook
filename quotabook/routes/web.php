@@ -33,14 +33,14 @@ Route::get('/', function () {
 
 // Quote Routes
 Route::get('quote', [QuoteController::class,'getQuote'])->name('quote');
-Route::get('quote/{id}', [QuoteController::class,'getQuoteDetail'])->name('quote_detail');
 Route::get('quote/create', [QuoteController::class,'getQuoteCreate'])->name('quote_create');
 Route::post('quote/create/post', [QuoteController::class,'postQuoteCreate'])->name('quote_create_post');
 // Route::get('quote/{id}/update', [QuoteController::class,'getQuoteUpdate'])->name('quote_detail');
+Route::get('quote/{id}', [QuoteController::class,'getQuoteDetail'])->name('quote_detail');
 
 
 // BookShelf Routes
-Route::get('book_shelf', [BookShelfController::class, 'getBookShelf'])->name('book_shelf');
+Route::get('book_shelf', [BookShelfController::class, 'index'])->name('book_shelf');
 
 
 // Writing Routes

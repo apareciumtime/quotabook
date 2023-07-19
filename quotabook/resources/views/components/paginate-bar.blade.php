@@ -48,7 +48,7 @@
         display: flex;
         flex-direction: row;
 
-        gap: 4px;
+        gap: .26vw;
     }
 
     #paginate_bar_middle_next_group {
@@ -67,23 +67,24 @@
 
     #paginate_bar_middle_text_group p {
         text-align: center;
-
-        width: 70%;
-        padding: 0;
-        margin: 0;
-
         color: var(--click, #CAC0A8);
+        color: var(--click, #CAC0A8);
+
+        font-size: 1vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 
     #paginate_bar_middle_text_group input {
         text-align: right;
-
-        width: 20%;
-
-        font-family: "K2D";
+        width: 2.64vw;
+        padding:.52vw;
         color: var(--click, #CAC0A8);
-        border-radius: 4px;
-        border: 2px solid var(--click, #CAC0A8);
+        border-radius: .26vw;
+        border: .13vw solid var(--click, #CAC0A8);
+
+        font-size: 1vw;
     }
 
 </style>
@@ -108,7 +109,7 @@
         </div>
         <div id="paginate_bar_middle_text_group">
             <p>
-                Page <input placeholder="1"> / xxxx
+                Page <input placeholder="1" autocomplete=”off” readonly> / xxxx
             </p>
         </div>
         <div id="paginate_bar_middle_next_group">

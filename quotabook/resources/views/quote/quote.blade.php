@@ -14,15 +14,11 @@
 
     #quote_frame {
         display: grid;
-        /* flex-direction: column; */
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 19.97vw 19.97vw 19.97vw 19.97vw;
         justify-items: center;
-
-        width:unset;
-        height: unset;
-        /* margin-top: 5vh; */
-        gap:1.05vw;
-        /* background: green; */
+        gap:1vw;
+        align-self:stretch;
+        /* border:1px red solid; */
     }
 </style>
 
@@ -33,7 +29,6 @@
             <div id="quote_frame">
                 @if(count($quotes) > 0)
                     @foreach($quotes as $quote)
-                        <x-quote-item id="{{ $quote->id }}"/>
                         <x-quote-item id="{{ $quote->id }}"/>
                     @endforeach
                 @else
