@@ -61,7 +61,7 @@
     align-items: flex-start;
     gap: 4.23vw;
     align-self: stretch;
-    border: 1px red solid;
+    /* border: 1px red solid; */
 }
 
 .whole_block{
