@@ -16,7 +16,7 @@
         display: grid;
         grid-template-columns: 19.97vw 19.97vw 19.97vw 19.97vw;
         justify-items: center;
-        gap:1vw;
+        gap: 1vw;
         align-self:stretch;
         /* border:1px red solid; */
     }

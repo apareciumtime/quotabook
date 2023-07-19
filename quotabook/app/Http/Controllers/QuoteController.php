@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Quote;
+use App\Models\Book;
 
 class QuoteController extends Controller
 {
@@ -18,9 +19,11 @@ class QuoteController extends Controller
     }
 
     public function getQuoteCreate() {
-        return view('quote.quote_create');
+        $books = Quote::all();
+        return view('quote.quote_create')->with('books', $books);
     }
     public function postQuoteCreate(Request $request) {
+        $books = Book::all();
 
         $validation = $request->validateWithBag('post', [
             'quote' => ['required'],
@@ -28,6 +31,28 @@ class QuoteController extends Controller
             'chapter' => ['required'],
             'page' => ['required'],
         ]);
+
+        $quote = new Quote();
+        $quote->quote = $request->quote;
+
+        $bookTitle = $request->book;
+        $book = Book::where('title', $bookTitle)->first();
+
+        if (!$book) {
+            $book = new Book();
+            $book->title = $bookTitle;
+            $book->save();
+        }
+
+        $quote->book_id = $book->id;
+        $quote->chapter = $request->chapter;
+        $quote->page = $request->page;
+
+        if ($request->has('comment')) {
+            $quote->comment = $request->comment;
+        }
+
+        $quote->save();
 
         return redirect()->route('quote');
     }

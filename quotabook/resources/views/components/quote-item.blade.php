@@ -19,12 +19,12 @@
         z-index: 1;
         width: 1.85vw;
         height: 1.85vw;
-        
+
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     .quote_item_frame_a{
         display: flex;
         position: relative;
@@ -32,7 +32,7 @@
         padding: 1.58vw;
         flex-direction: column;
         align-self:stretch;
-        
+
         border-radius: .26vw;
         border: .26vw solid var(--click, #CAC0A8);
         background: #FFF;
@@ -57,13 +57,13 @@
 
     .quote_item_body{
         color: var(--click, #CAC0A8);
-        
+
         font-size: .92vw;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        
-        
+
+
         /* to ellipsis 16 lines*/
         display: -webkit-box;
         word-break: break-all;
@@ -81,7 +81,7 @@
         z-index: 1;
 
         gap:1.05vw;
-        
+
         display: none;
         justify-content: center;
         align-items: center;
@@ -104,7 +104,7 @@
                 {{ $quote->book }}
             </div>
             <div class="quote_item_body">
-                {{ $quote->quote }}sadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;lasadml;asmd;lasmd;la
+                {{ $quote->quote }}
             </div>
         </div>
     </a>
