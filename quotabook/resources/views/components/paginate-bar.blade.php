@@ -119,10 +119,10 @@
     </div>
     <div id="paginate_bar_right_group">
         @if($choice === "quote")
-            <x-icon icon="create"/>
+            <x-icon icon="create" model="quote"/>
         @elseif($choice === "quote_detail")
-            <x-icon icon="edit"/>
-            <x-icon icon="delete"/>
+            <x-icon icon="edit" model="quote" id="{{ $id }}"/>
+            <x-icon icon="delete" model="quote" id="{{ $id }}"/>
         @elseif($choice === "bookshelf")
             <x-icon icon="shelf_create"/>
             <x-icon icon="create"/>

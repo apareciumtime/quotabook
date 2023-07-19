@@ -143,13 +143,20 @@
             <div class="input_unit">
                 <h2>Book</h2>
                 <div class="input_input">
-                    <input name="book" type="text" required placeholder="Book">
+                    <input name="book" type="text" required placeholder="Select or create new book." list="books">
+                    <datalist id="books">
+                        @if(isset($books))
+                            @foreach ($books as $book)
+                                <option value="{{ $book->title }}">
+                            @endforeach
+                        @endif
+                    </datalist>
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Page</h2>
                 <div class="input_input">
-                    <input name="chapter" type="number" required placeholder="Chapter">
+                    <input name="chapter" type="text" required placeholder="Chapter">
                 </div>
             </div>
             <div class="input_unit">
@@ -161,7 +168,7 @@
             <div class="input_unit">
                 <h2>Comment</h2>
                 <div class="input_input">
-                    <textarea name="comment" required placeholder="Comment" cols="47" rows="5"></textarea>
+                    <textarea name="comment" placeholder="Comment" cols="47" rows="5"></textarea>
                 </div>
             </div>
             <button type="submit" class="submit">Save</button>

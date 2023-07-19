@@ -35,6 +35,6 @@ class CreateBookShelfTable extends Migration
         //     $table->dropForeign(['book_id']);
         // });
 
-        Schema::dropIfExists('BookShelf');
+        Schema::dropIfExists('bookshelves');
     }
 }

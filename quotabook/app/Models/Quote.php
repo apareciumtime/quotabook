@@ -10,4 +10,9 @@ class Quote extends Model
     use HasFactory;
 
     protected $fillable = ['book', 'quote', 'chapter', 'page', 'comment'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

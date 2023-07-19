@@ -12,9 +12,11 @@ class PaginateBar extends Component
      * @return void
      */
     public $choice;
-    public function __construct($choice)
+    public $id;
+    public function __construct($choice, $id="")
     {
         $this->choice = $choice;
+        $this->id = $id;
     }
 
     /**

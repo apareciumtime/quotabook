@@ -64,9 +64,9 @@
 @section('body')
         <x-dec-frame choice="quote"/>
         <div class="quote_all">
-            <x-paginate-bar choice="quote_detail"/>
+            <x-paginate-bar choice="quote_detail" id="{{ $quote->id }}"/>
             <div class="info_frame">
-                <h2>{{ $quote->book }}</h2>
+                <h2>{{ $book->title }}</h2>
                 <p>{{ $quote->quote }}</p>
             </div>
             <div class="info_frame">

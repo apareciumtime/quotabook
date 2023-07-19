@@ -13,19 +13,32 @@ class Icon extends Component
      */
 
     public $icon;
+    public $model;
+    public $id;
     public $link_to;
-    public function __construct($icon, $link_to = "quote_create")
+
+    public function __construct($icon, $model = "", $id = "")
     {
         $this->icon = $icon;
-        $this->link_to = $link_to;
+        $this->model = $model;
+        $this->id = $id;
 
-        // if ($link_to == "quote") {
-        //     $this->link_to = "quote_create";
-        // } elseif ($link_to == "book") {
-        //     $this->link_to = "quote1";
-        // } else {
-        //     $this->link_to = "quote";
-        // }
+        if ($model == "quote") {
+            if($icon == "create") {
+                $this->link_to = "quote_create";
+            }
+            elseif($icon == "edit") {
+                $this->link_to = "quote_update";
+            }
+            elseif($icon == "delete") {
+                $this->link_to = "quote_delete";
+            }
+        }
+        elseif ($model == "bookshelf") {
+            $this->link_to = "book_shelf";
+        } else {
+            $this->link_to = "quote";
+        }
     }
 
     /**

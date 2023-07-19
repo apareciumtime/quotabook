@@ -101,7 +101,7 @@
     <a href="{{route('quote_detail', $quote->id)}}" class="quote_item_frame_a">
     <div class="quote_item">
             <div class="quote_item_head">
-                {{ $quote->book }}
+                {{ $book->title }}
             </div>
             <div class="quote_item_body">
                 {{ $quote->quote }}
@@ -114,7 +114,7 @@
         </svg>
     </div>
     <div class="quote_item_icon">
-        <x-icon icon="edit"/>
-        <x-icon icon="delete"/>
+        <x-icon icon="edit" model="quote" id="{{ $quote->id }}"/>
+        <x-icon icon="delete" model="quote" id="{{ $quote->id }}"/>
     </div>
 </div>
