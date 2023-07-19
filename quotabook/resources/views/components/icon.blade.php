@@ -4,6 +4,7 @@
         justify-content: center;
         align-items: center;
         padding: .26vw;
+        margin:0px;
 
         /* background: blue; */
     }
@@ -67,6 +68,7 @@
         width: 1.85vw;
         height: 1.85vw;
         fill: #CAC0A8;
+        margin:0px;
     }
 
     .quote_bar_icon_s {

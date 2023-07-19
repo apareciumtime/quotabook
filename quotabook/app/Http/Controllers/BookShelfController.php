@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BookShelf;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB as DB;
 
 class BookShelfController extends Controller
 {
@@ -14,7 +15,24 @@ class BookShelfController extends Controller
      */
     public function index()
     {
-        return view('bookshelf.bookshelf');
+        $bookshelfList = [];
+        $bookshelfName = [];
+        $bookshelves = Bookshelf::all();
+        foreach($bookshelves as $bookshelf){
+            if(!in_array($bookshelf->bookshelf_name,$bookshelfName)){
+                array_push($bookshelfName,$bookshelf->bookshelf_name);
+                array_push($bookshelfList,$bookshelf);
+            }
+        }
+
+        $bookcounts = Bookshelf::select('bookshelf_name', DB::raw('count(*) as total_books'))
+        ->groupBy('bookshelf_name')->get();
+
+        return view('bookshelf.bookshelf', [
+            'bookshelf'=>$bookshelves,
+            'bookshelfList'=>$bookshelfList,
+            'bookcounts'=>$bookcounts,
+        ]);
     }
 
     /**
