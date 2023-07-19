@@ -1,7 +1,7 @@
 @extends('components.header')
 <style>
     /* quote_frame */
-    #shelf_all {
+    #bookshelf_playground {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -14,21 +14,17 @@
 
     #shelf_frame {
         display: grid;
-        /* flex-direction: column; */
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 19.97vw 19.97vw 19.97vw 19.97vw;
         justify-items: center;
-
-        width:unset;
-        height: unset;
-        /* margin-top: 5vh; */
-        gap:1.05vw;
-        /* background: green; */
+        gap:1vw;
+        align-self:stretch;
+        border: 1px red solid;
     }
 </style>
 
 @section('body')
         <x-dec-frame choice="bookshelf"/>
-        <div id="shelf_all">
+        <div id="bookshelf_playground">
             <x-paginate-bar choice="bookshelf"/>
             <div id="shelf_frame">
 

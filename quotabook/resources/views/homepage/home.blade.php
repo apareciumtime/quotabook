@@ -14,13 +14,13 @@
 .quoter_today{
     width: 100%;
     max-height: 16.93vw;
-    /* border: 1px red solid; */
-
+    
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
     align-self: stretch;
+    /* border: 1px red solid; */
 }
 
 .quoter_today_box{

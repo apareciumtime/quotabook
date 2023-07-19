@@ -41,6 +41,7 @@ Route::get('quote/{id}', [QuoteController::class,'getQuoteDetail'])->name('quote
 
 // BookShelf Routes
 Route::get('book_shelf', [BookShelfController::class, 'index'])->name('book_shelf');
+Route::get('book_shelf/create', [BookShelfController::class, 'create'])->name('book_shelf_create');
 
 
 // Writing Routes

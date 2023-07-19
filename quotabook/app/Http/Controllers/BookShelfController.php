@@ -24,7 +24,7 @@ class BookShelfController extends Controller
      */
     public function create()
     {
-        //
+        return view('bookshelf.bookshelf_create');
     }
 
     /**
