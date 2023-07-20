@@ -113,13 +113,199 @@
         </div>
         <div class="bookshelf_item_body">
                 @if($bookAmount >= 39)
-                    <div class="floor3" id="more39">3</div>
-                    <div class="floor2" id="more39">2</div>
-                    <div class="floor1" id="more39">1</div>
+                    <div class="floor_left">
+                        <svg width="2.11vw" height="6.48vw" viewBox="0 0 2.11vw 6.48vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.1227vw" y="0.0225vw" width="1.05vw" height="6.34vw" rx="2" transform="rotate(10 16.9763 0.340027)" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                    </div>
+                    <div class="floor_left">
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.65vw" height="6.48vw" viewBox="0 0 1.65vw 6.48vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.1243vw" width="1.05vw" height="6.34vw" rx="2" transform="rotate(-5 0 1.87988)" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                    </div>
+                    <div class="floor_right">
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.72vw" height="6.48vw" viewBox="0 0 1.72vw 6.48vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x=".6094vw" y="0.0321vw" width="1.05vw" height="6.34vw" rx="2" transform="rotate(5 9.21387 0.485413)" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                    </div>
                 @elseif($bookAmount >= 20)
-                    <div class="floor3" id="more20">3</div>
-                    <div class="floor2" id="more20">2</div>
-                    <div class="floor1" id="more20">1</div>
+                    <div class="floor_left">
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#FFF"/>
+                        </svg>
+                    </div>
+                    <div class="floor_right">
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="2.11vw" height="6.48vw" viewBox="0 0 2.11vw 6.48vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.1227vw" y="0.0225vw" width="1.05vw" height="6.34vw" rx="2" transform="rotate(10 16.9763 0.340027)" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.65vw" height="6.48vw" viewBox="0 0 1.65vw 6.48vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.1243vw" width="1.05vw" height="6.34vw" rx="2" transform="rotate(-5 0 1.87988)" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                    </div>
+                    <div class="floor_left">
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.65vw" height="6.48vw" viewBox="0 0 1.65vw 6.48vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.1243vw" width="1.05vw" height="6.34vw" rx="2" transform="rotate(-5 0 1.87988)" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="1.05vw" height="6.34vw" rx="2" fill="#CAC0A8"/>
+                        </svg>
+                        <svg width="2.11vw" height="6.48vw" viewBox="0 0 2.11vw 6.48vw" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.1227vw" y="0.0225vw" width="1.05vw" height="6.34vw" rx="2" transform="rotate(10 16.9763 0.340027)" fill="#CAC0A8"/>
+                        </svg>
+                    </div>
                 @elseif($bookAmount >= 10)
                     <div class="floor_left">
                         <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -220,9 +406,9 @@
     </div>
 
     <div class="icon_list">
-        <x-icon icon=delete/>
-        <x-icon icon=edit/>
-        <x-icon icon=create/>
+        <x-icon icon=delete model="bookshelf"/>
+        <x-icon icon=edit model="bookshelf"/>
+        <x-icon icon=create model="bookshelf"/>
     </div>
 
 </div>

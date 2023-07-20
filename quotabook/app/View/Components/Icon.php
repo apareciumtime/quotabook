@@ -35,7 +35,15 @@ class Icon extends Component
             }
         }
         elseif ($model == "bookshelf") {
-            $this->link_to = "book_shelf";
+            if($icon == "create"){
+                $this->link_to = "book_shelf_create";
+            }
+            elseif($icon == "edit"){
+                $this->link_to = "book_shelf_update";
+            }
+            elseif($icon == "delete"){
+                $this->link_to = "book_shelf_delete";
+            }
         } else {
             $this->link_to = "quote";
         }

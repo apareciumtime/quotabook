@@ -45,7 +45,11 @@ Route::get('quote/{id}', [QuoteController::class,'getQuoteDetail'])->name('quote
 
 
 // BookShelf Routes
-Route::get('book_shelf', [BookShelfController::class, 'index'])->name('book_shelf');
+Route::get('/book_shelf', [BookShelfController::class, 'index'])->name('book_shelf');
+Route::get('/book_shelf/create', [BookShelfController::class, 'create'])->name('book_shelf_create');
+Route::get('/book_shelf/update', [BookShelfController::class, 'update'])->name('book_shelf_update');
+Route::get('/book_shelf/delete', [BookShelfController::class, 'destroy'])->name('book_shelf_delete');
+Route::get('/book_shelf/{id}', [BookShelfController::class, 'show'])->name('book_shelf_detail');
 
 
 // Writing Routes

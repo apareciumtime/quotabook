@@ -31,17 +31,17 @@ class BookshelfSeeder extends Seeder
             'book_id' =>1,
         ]);
         DB::table('bookshelves')->insert([
-            'bookshelf_name' => 'pf0qPI4THC',
+            'bookshelf_name' => 'ccccccc',
             'floor' =>1,
             'book_id' =>1,
         ]);
         DB::table('bookshelves')->insert([
-            'bookshelf_name' => 'pf0qPI4THC',
+            'bookshelf_name' => 'bbbbbbb',
             'floor' =>1,
             'book_id' =>1,
         ]);
         DB::table('bookshelves')->insert([
-            'bookshelf_name' => 'pf0qPI4THC',
+            'bookshelf_name' => 'aaaaaaa',
             'floor' =>1,
             'book_id' =>1,
         ]);

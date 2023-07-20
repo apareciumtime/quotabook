@@ -8,6 +8,7 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    padding:1.05vw;
     /* border: 1px red solid; */
 }
 
