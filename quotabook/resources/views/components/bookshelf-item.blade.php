@@ -107,7 +107,7 @@
 </style>
 
 <div class="bookshelf_item_area">
-    <a href="#" class="bookshelf_item_area_a">
+    <a href="{{route('book_shelf_detail', '$bookshelf->id')}}" class="bookshelf_item_area_a">
         <div class="bookshelf_item_topic">
             {{$bookshelf->bookshelf_name}}
         </div>

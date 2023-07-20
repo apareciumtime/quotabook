@@ -44,7 +44,13 @@ class BookShelfController extends Controller
     {
         return view('bookshelf.bookshelf_create');
     }
-
+    public function postBookshelfValidation(Request $request) {
+        $validation = $request->validateWithBag('post', [
+            'bookshelf_name' => 'required|unique:post|max:24',
+            'floor' => ['required'],
+            'book_id' => ['unre'],
+        ]);
+    }
     /**
      * Store a newly created resource in storage.
      *

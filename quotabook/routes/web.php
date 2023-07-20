@@ -5,6 +5,7 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\BookShelfController;
 use App\Http\Controllers\WritingController;
 use App\Http\Controllers\ManageLibraryController;
+use App\Models\Bookshelf;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -46,9 +47,14 @@ Route::get('quote/{id}', [QuoteController::class,'getQuoteDetail'])->name('quote
 
 // BookShelf Routes
 Route::get('/book_shelf', [BookShelfController::class, 'index'])->name('book_shelf');
+    //Create
 Route::get('/book_shelf/create', [BookShelfController::class, 'create'])->name('book_shelf_create');
+Route::post('/book_shelf/create/post', [BookshelfController::class,'postBookshelfCreate'])->name('book_shelf_create_post');
+    //Update
 Route::get('/book_shelf/update', [BookShelfController::class, 'update'])->name('book_shelf_update');
+    //Delete
 Route::get('/book_shelf/delete', [BookShelfController::class, 'destroy'])->name('book_shelf_delete');
+    //Detail
 Route::get('/book_shelf/{id}', [BookShelfController::class, 'show'])->name('book_shelf_detail');
 
 
