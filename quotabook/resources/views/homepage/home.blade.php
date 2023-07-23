@@ -8,19 +8,23 @@
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    padding:1.05vw;
+    padding: 0;
+
+    /* background: blue; */
     /* border: 1px red solid; */
 }
 
 .quoter_today{
-    width: 100%;
-    max-height: 16.93vw;
-    
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
     align-self: stretch;
+
+    width: 100%;
+    max-height: 16.93vw;
+    margin: 4.23vw 0;
+
+    gap: 10px;
     /* border: 1px red solid; */
 }
 
@@ -33,7 +37,7 @@
     align-items: center;
     border-radius: 1.32vw 1.32vw 0px 1.32vw;
     border: .26vw solid var(--click, #CAC0A8);
-    
+
     color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
     font-size: 1.19vw;
     font-style: normal;
@@ -176,7 +180,6 @@
     <div class="quotabook">
         QuotabooK
     </div>
-
     <div class="quoter_today">
         <div class="quoter_today_box">
             Bird by bird ค่อย ๆ เขียนถึงนกไปทีละตัว แล้ววันหนึ่งจะสำเร็จเอง ไม่ต้องรีบร้อน
@@ -198,10 +201,10 @@
                         </div>
                         <div class="block_column_list">
                             <div class="block_column_list_each">
-                                1. 
+                                1.
                             </div>
                             <div class="block_column_list_each">
-                                2. 
+                                2.
                             </div>
                         </div>
                     </div>
@@ -212,12 +215,12 @@
                         <div class="block_column_list_underline">
                             <a href="#">
                             <div class="block_column_list_each">
-                                1. 
+                                1.
                             </div>
                             </a>
                             <a href="#">
                             <div class="block_column_list_each">
-                                2. 
+                                2.
                             </div>
                             </a>
                         </div>
@@ -237,10 +240,10 @@
                         </div>
                         <div class="block_column_list">
                             <div class="block_column_list_each">
-                                1. 
+                                1.
                             </div>
                             <div class="block_column_list_each">
-                                2. 
+                                2.
                             </div>
                         </div>
                     </div>
@@ -251,12 +254,12 @@
                         <div class="block_column_list_underline">
                             <a href="#">
                             <div class="block_column_list_each">
-                                1. 
+                                1.
                             </div>
                             </a>
                             <a href="#">
                             <div class="block_column_list_each">
-                                2. 
+                                2.
                             </div>
                             </a>
                         </div>
@@ -276,10 +279,10 @@
                         </div>
                         <div class="block_column_list">
                             <div class="block_column_list_each">
-                                1. 
+                                1.
                             </div>
                             <div class="block_column_list_each">
-                                2. 
+                                2.
                             </div>
                         </div>
                     </div>
@@ -290,12 +293,12 @@
                         <div class="block_column_list_underline">
                             <a href="#">
                             <div class="block_column_list_each">
-                                1. 
+                                1.
                             </div>
                             </a>
                             <a href="#">
                             <div class="block_column_list_each">
-                                2. 
+                                2.
                             </div>
                             </a>
                         </div>
@@ -315,10 +318,10 @@
                         </div>
                         <div class="block_column_list">
                             <div class="block_column_list_each">
-                                1. 
+                                1.
                             </div>
                             <div class="block_column_list_each">
-                                2. 
+                                2.
                             </div>
                         </div>
                     </div>
@@ -329,12 +332,12 @@
                         <div class="block_column_list_underline">
                             <a href="#">
                             <div class="block_column_list_each">
-                                1. 
+                                1.
                             </div>
                             </a>
                             <a href="#">
                             <div class="block_column_list_each">
-                                2. 
+                                2.
                             </div>
                             </a>
                         </div>

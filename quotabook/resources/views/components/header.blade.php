@@ -143,7 +143,7 @@
             align-items: center;
             /* gap: 4.23vw; */
             align-self: stretch;
-            padding:2.11vw 8.46vw;
+            padding: 2.11vw 8.46vw;
             /* border: 1px red solid; */
         }
 

@@ -62,7 +62,7 @@
 </style>
 
 @section('body')
-        <x-dec-frame choice="quote"/>
+        <x-dec-frame choice="quote_detail"/>
         <div class="quote_all">
             <x-paginate-bar choice="quote_detail" id="{{ $quote->id }}"/>
             <div class="info_frame">
