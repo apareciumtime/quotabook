@@ -166,15 +166,15 @@
                 </div>
             </div>
             <div class="input_unit">
-                <h2>Page</h2>
+                <h2>Chapter</h2>
                 <div class="input_input">
-                    <input name="chapter" type="text" required placeholder="Chapter">
+                    <input name="chapter" type="text" placeholder="Chapter">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Page</h2>
                 <div class="input_input">
-                    <input name="page" type="number" required placeholder="Page">
+                    <input name="page" type="number" placeholder="Page">
                 </div>
             </div>
             <div class="svg_container">

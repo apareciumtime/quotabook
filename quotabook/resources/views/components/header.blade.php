@@ -199,6 +199,7 @@
             <x-button-menu label="BOOK SHELF"/>
             <x-button-menu label="WRITING"/>
             <x-button-menu label="MANAGE LIBRARY"/>
+            <x-button-menu label="BOOK"/>
         </div>
         <div class="header_box_user_bar">
             <div class="user_bar_profilePic_name">

@@ -166,15 +166,15 @@
                 </div>
             </div>
             <div class="input_unit">
-                <h2>Page</h2>
+                <h2>Chapter</h2>
                 <div class="input_input">
-                    <input name="chapter" value="{{ $quote->chapter }}" type="text" required placeholder="Chapter">
+                    <input name="chapter" value="{{ $quote->chapter }}" type="text" placeholder="Chapter">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Page</h2>
                 <div class="input_input">
-                    <input name="page" value="{{ $quote->page }}" type="number" required placeholder="Page">
+                    <input name="page" value="{{ $quote->page }}" type="number" placeholder="Page">
                 </div>
             </div>
             <div class="svg_container">

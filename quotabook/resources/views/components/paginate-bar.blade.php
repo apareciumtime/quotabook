@@ -103,33 +103,37 @@
         @endif
     </div>
     <div id="paginate_bar_middle_group">
-        <div id="paginate_bar_middle_back_group">
-            <x-icon icon="firstpage"/>
-            <x-icon icon="previouspage"/>
-        </div>
-        <div id="paginate_bar_middle_text_group">
-            <p>
-                Page <input placeholder="1" autocomplete=”off” readonly> / xxxx
-            </p>
-        </div>
-        <div id="paginate_bar_middle_next_group">
-            <x-icon icon="nextpage"/>
-            <x-icon icon="lastpage"/>
-        </div>
+        @if($choice === "book_detail")
+            <p>{{ $title }}</p>
+        @else
+            <div id="paginate_bar_middle_back_group">
+                <x-icon icon="firstpage"/>
+                <x-icon icon="previouspage"/>
+            </div>
+            <div id="paginate_bar_middle_text_group">
+                <p>
+                    Page <input placeholder="1" autocomplete=”off” readonly> / xxxx
+                </p>
+            </div>
+            <div id="paginate_bar_middle_next_group">
+                <x-icon icon="nextpage"/>
+                <x-icon icon="lastpage"/>
+            </div>
+        @endif
     </div>
     <div id="paginate_bar_right_group">
         @if($choice === "quote")
             <x-icon icon="create" model="quote"/>
-
         @elseif($choice === "quote_detail")
             <x-icon icon="edit" model="quote" id="{{ $id }}"/>
             <x-icon icon="delete" model="quote" id="{{ $id }}"/>
-
         @elseif($choice === "bookshelf")
             <x-icon icon="create" model="bookshelf"/>
         @elseif($choice === "bookshelf_detail")
         @elseif($choice === "book")
         @elseif($choice === "book_detail")
+            <x-icon icon="edit" model="quote" id="{{ $id }}"/>
+            <x-icon icon="delete" model="quote" id="{{ $id }}"/>
         @endif
     </div>
 </div>

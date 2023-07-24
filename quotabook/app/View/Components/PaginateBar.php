@@ -13,10 +13,12 @@ class PaginateBar extends Component
      */
     public $choice;
     public $id;
-    public function __construct($choice, $id="")
+    public $title;
+    public function __construct($choice, $id="", $title="")
     {
         $this->choice = $choice;
         $this->id = $id;
+        $this->title = $title;
     }
 
     /**

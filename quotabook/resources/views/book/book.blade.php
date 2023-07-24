@@ -43,7 +43,7 @@
                 @if(count($books) > 0)
                     @foreach($books as $book)
                         <div class="book_item">
-                            <h1>{{ $book->title }}</h1>
+                            <h1><a href="{{ route('book_detail', $book->id) }}">{{ $book->title }}</a></h1>
                         </div>
                     @endforeach
                 @else

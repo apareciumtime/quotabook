@@ -45,6 +45,19 @@ Route::get('quote/delete/{id}', [QuoteController::class,'getQuoteDelete'])->name
 Route::get('quote/{id}', [QuoteController::class,'getQuoteDetail'])->name('quote_detail');
 
 
+// Book Routes
+Route::get('book', [BookController::class,'getBook'])->name('book');
+    // Create
+Route::get('book/create', [BookController::class,'getBookCreate'])->name('book_create');
+Route::post('book/create/post', [BookController::class,'postBookCreate'])->name('book_create_post');
+    // Update
+Route::get('book/update/{id}', [BookController::class,'getBookUpdate'])->name('book_update');
+Route::post('book/update/post/{id}', [BookController::class,'postBookUpdate'])->name('book_update_post');
+    // Delete, Detail
+Route::get('book/delete/{id}', [BookController::class,'getBookDelete'])->name('book_delete');
+Route::get('book/{id}', [BookController::class,'getBookDetail'])->name('book_detail');
+
+
 // BookShelf Routes
 Route::get('/book_shelf', [BookShelfController::class, 'index'])->name('book_shelf');
     //Create

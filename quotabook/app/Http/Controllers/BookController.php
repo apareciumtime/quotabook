@@ -28,6 +28,16 @@ class BookController extends Controller
 
         $book = new Book();
         $book->title = $request->title;
+        $book->pages = $request->pages;
+        $book->publisher = $request->publisher;
+        $book->edition = $request->edition;
+        $book->ISBN = $request->ISBN;
+        $book->ori_lan = $request->ori_lan;
+        $book->author = $request->author;
+        $book->trans_lan = $request->trans_lan;
+        $book->translator = $request->translator;
+        $book->artist = $request->artist;
+        $book->details = $request->details;
         // $book->user_id = Auth::id();
         $book->save();
 
@@ -46,6 +56,16 @@ class BookController extends Controller
 
         $book = Book::findOrFail($id);
         $book->title = $request->title;
+        $book->pages = $request->pages;
+        $book->publisher = $request->publisher;
+        $book->edition = $request->edition;
+        $book->ISBN = $request->ISBN;
+        $book->ori_lan = $request->ori_lan;
+        $book->author = $request->author;
+        $book->trans_lan = $request->trans_lan;
+        $book->translator = $request->translator;
+        $book->artist = $request->artist;
+        $book->details = $request->details;
         // $quote->user_id = Auth::id();
 
         $book->save();
