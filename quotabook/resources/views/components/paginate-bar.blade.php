@@ -131,9 +131,10 @@
             <x-icon icon="create" model="bookshelf"/>
         @elseif($choice === "bookshelf_detail")
         @elseif($choice === "book")
+            <x-icon icon="create" model="book"/>
         @elseif($choice === "book_detail")
-            <x-icon icon="edit" model="quote" id="{{ $id }}"/>
-            <x-icon icon="delete" model="quote" id="{{ $id }}"/>
+            <x-icon icon="edit" model="book" id="{{ $id }}"/>
+            <x-icon icon="delete" model="book" id="{{ $id }}"/>
         @endif
     </div>
 </div>

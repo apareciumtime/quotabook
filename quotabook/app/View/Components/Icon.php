@@ -33,8 +33,7 @@ class Icon extends Component
             elseif($icon == "delete") {
                 $this->link_to = "quote_delete";
             }
-        }
-        elseif ($model == "bookshelf") {
+        } elseif ($model == "bookshelf") {
             if($icon == "create"){
                 $this->link_to = "book_shelf_create";
             }
@@ -43,6 +42,16 @@ class Icon extends Component
             }
             elseif($icon == "delete"){
                 $this->link_to = "book_shelf_delete";
+            }
+        } elseif ($model == "book") {
+            if($icon == "create") {
+                $this->link_to = "book_create";
+            }
+            elseif($icon == "edit") {
+                $this->link_to = "book_update";
+            }
+            elseif($icon == "delete") {
+                $this->link_to = "book_delete";
             }
         } else {
             $this->link_to = "quote";

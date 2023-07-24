@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\BookShelfController;
 use App\Http\Controllers\WritingController;
 use App\Http\Controllers\ManageLibraryController;

@@ -142,9 +142,9 @@
             </ul>
         </div>
     @endif
-    <h1>Create New Quote</h1>
+    <h1>ReBook</h1>
     <div class="form_frame">
-        <form method="POST" action="{{ route('quote_create_post') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('book_update_post', $book->id) }}" enctype="multipart/form-data">
             @csrf
             <div class="input_unit">
                 <h2>* Title</h2>
