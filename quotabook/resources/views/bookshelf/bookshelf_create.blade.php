@@ -11,6 +11,16 @@
     /* border:1px red solid; */
 }
 
+.bookshelf_form_frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.05vw;
+
+    /* border:1px red solid; */
+}
+
 .topic{
     color: var(--click, #CAC0A8);
     font-size: 2.11vw;
@@ -18,6 +28,67 @@
     padding: 0;
     margin: 0;
     /* border:1px red solid; */
+}
+
+.input_unit{
+    display: grid;
+    grid-template-columns: 29.49vw 23vw 28.43vw;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    gap: 1.05vw;
+}
+
+.input_unit_topic{
+    font-size: 1.05vw;
+    text-align: right;
+    padding:0.925vw 0px;
+    color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
+    /* border:1px red solid;     */
+}
+
+.input_unit_input{
+    display: flex;
+    align-items: center;
+}
+
+.input_unit_input textarea {
+    padding: 0.52vw 0.92vw;
+    outline: none;
+
+    font-family: "K2D";
+    font-size: 0.79vw;
+    color: var(--click, #CAC0A8);;
+    border-radius: 0.26vw;
+    border: 0.13vw solid var(--click, #CAC0A8);
+}
+
+.input_unit_input input {
+        width: 100%;
+        height: 100%;
+        padding: 0.52vw 0.92vw;
+        outline: none;
+
+        font-family: "K2D";
+        font-size: 0.79vw;
+        color: var(--click, #CAC0A8);;
+        border-radius: 0.26vw;
+        border: 0.13vw solid var(--click, #CAC0A8);
+    }
+
+.input_unit_input select {
+    width: 100%;
+    height: 100%;
+    padding: 0.52vw 0.92vw;
+    outline: none;
+
+    font-family: "K2D";
+    font-size: 0.79vw;
+    color: var(--click, #CAC0A8);;
+    border-radius: 0.26vw;
+    border: 0.13vw solid var(--click, #CAC0A8);
 }
 
 .bookshelf_form_frame {
@@ -146,8 +217,8 @@
         Create new Bookshelf
     </div>
 
-    <div class="bookshelf_form_frame">
-        <form method="POST" action="{{ route('book_shelf_create_post') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('book_shelf_create_post') }}" enctype="multipart/form-data">
+        <div class="bookshelf_form_frame">
             @csrf
             <div class="input_unit">
                 <h2>Book Shelf Name</h2>
@@ -192,13 +263,22 @@
             </datalist>
 
             <button type="submit" class="submit">Save</button>
+        </div>
         </form>
+
     </div>
+
+
+    
+
+    
+
+
+<!-- <textarea name="quote" required placeholder="" cols="47" rows="5"></textarea> -->
 </div>
 <script>
     $(document).ready(function() {
         var bookCounts = [1, 1, 1];
-
         $(".add_book").click(function() {
             var floor = $(this).data("floor");
 

@@ -109,7 +109,7 @@
 <div class="bookshelf_item_area">
     <a href="{{route('book_shelf_detail', '$bookshelf->id')}}" class="bookshelf_item_area_a">
         <div class="bookshelf_item_topic">
-            {{$bookshelf->bookshelf_name}}
+            {{$bookshelf->name}}
         </div>
         <div class="bookshelf_item_body">
                 @if($bookAmount >= 39)

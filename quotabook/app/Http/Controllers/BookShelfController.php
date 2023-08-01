@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BookShelf;
 use App\Models\Book;
+use App\Models\BookShelf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB as DB;
 
@@ -130,11 +130,48 @@ class BookShelfController extends Controller
         ->with('books', $books);
     }
 
-    public function postBookShelfUpdate(Request $request, $id) {
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $book_list = Book::all();
+        return view('bookshelf.bookshelf_create', [
+            'book_list'=>$book_list,
+        ]);
+    }
+    public function postBookshelfValidation(Request $request) {
+        $validation = $request->validateWithBag('post', [
+            'bookshelf_name' => 'required|unique:post|max:24',
+            'floor' => ['required'],
+            'book_id' => ['unre'],
+        ]);
+    }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
 
     }
 
     public function getQuoteDelete($id) {
 
     }
+
+    public function submitChoices(Request $request)
+{
+    $selectedBookIds = $request->input('book_choices', []);
+    
+    // Use the selectedBookIds to retrieve the selected books from the database
+    $selectedBooks = Book::whereIn('id', $selectedBookIds)->get();
+    
+    // Process the selected books as needed
+}
 }

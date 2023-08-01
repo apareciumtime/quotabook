@@ -63,7 +63,8 @@ Route::get('book/{id}', [BookController::class,'getBookDetail'])->name('book_det
 Route::get('/book_shelf', [BookShelfController::class, 'getBookShelf'])->name('book_shelf');
     //Create
 Route::get('/book_shelf/create', [BookShelfController::class, 'getBookShelfCreate'])->name('book_shelf_create');
-Route::post('/book_shelf/create/post', [BookShelfController::class,'postBookshelfCreate'])->name('book_shelf_create_post');
+Route::post('/book_shelf/create/post', [BookshelfController::class,'postBookshelfCreate'])->name('book_shelf_create_post');
+Route::post('/submit_choices', [BookShelfController::class, 'submitChoices'])->name('submit_choices');
     //Update
 Route::get('book_shelf/update/{id}', [BookShelfController::class,'getBookShelfUpdate'])->name('book_shelf_update');
 Route::post('book_shelf/update/post/{id}', [BookShelfController::class,'postBookShelfUpdate'])->name('book_shelf_update_post');
