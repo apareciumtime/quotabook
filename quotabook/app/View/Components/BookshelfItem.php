@@ -20,7 +20,7 @@ class BookshelfItem extends Component
     public function __construct($id)
     {
         $this->bookshelf = BookShelf::find($id);
-        $this->bookAmount = $this->bookshelf->book_amount;
+        $this->bookAmount = $this->bookshelf->books_count;
     }
 
     /**

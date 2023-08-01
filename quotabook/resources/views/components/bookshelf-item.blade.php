@@ -110,6 +110,7 @@
     <a href="{{route('book_shelf_detail', '$bookshelf->id')}}" class="bookshelf_item_area_a">
         <div class="bookshelf_item_topic">
             {{$bookshelf->name}}
+            {{$bookAmount}}
         </div>
         <div class="bookshelf_item_body">
                 @if($bookAmount >= 39)
@@ -398,7 +399,6 @@
                 @endif
         </div>
     </a>
-
     <div class="bookmark">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" fill="none">
             <path d="M0.5 1.875V19.0508C0.5 19.5742 0.925781 20 1.44922 20C1.64453 20 1.83594 19.9414 1.99609 19.8281L8 15.625L14.0039 19.8281C14.1641 19.9414 14.3555 20 14.5508 20C15.0742 20 15.5 19.5742 15.5 19.0508V1.875C15.5 0.839844 14.6602 0 13.625 0H2.375C1.33984 0 0.5 0.839844 0.5 1.875Z" fill="#CAC0A8"/>

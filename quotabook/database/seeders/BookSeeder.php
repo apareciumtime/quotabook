@@ -16,6 +16,7 @@ class BookSeeder extends Seeder
     {
         DB::table('books')->insert([
             'id'=>1,
+            'title'=>'aaa',
         ]);
     }
 }

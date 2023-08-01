@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\CommonBook;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -21,10 +22,13 @@ class BookController extends Controller
     public function getBookCreate() {
         return view('book.book_create');
     }
-    public function postBookCreate(Request $request) {
+    public function postCommonBookCreate(Request $request) {
         $validation = $request->validateWithBag('post', [
             'title' => ['required'],
         ]);
+
+        $common_book = new CommonBook();
+        $common_book->publisher = $request->title;
 
         $book = new Book();
         $book->title = $request->title;

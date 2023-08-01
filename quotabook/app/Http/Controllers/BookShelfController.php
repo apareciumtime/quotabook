@@ -11,9 +11,17 @@ class BookShelfController extends Controller
 {
     public function getBookShelf() {
         $bookshelves = Bookshelf::all();
-
+        $this->updateBooksCount();
         return view('bookshelf.bookshelf')
         ->with('bookshelves', $bookshelves);
+    }
+
+    public function updateBooksCount(){
+        $bookshelves = BookShelf::all();
+        foreach($bookshelves as $bookshelf){
+            $bookshelf->books_count = DB::table('Books')->where('bookshelves_id','=',$bookshelf->id)->count();
+            $bookshelf->save();
+        }
     }
 
     public function getBookShelfDetail($id) {
@@ -135,13 +143,6 @@ class BookShelfController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $book_list = Book::all();
-        return view('bookshelf.bookshelf_create', [
-            'book_list'=>$book_list,
-        ]);
-    }
     public function postBookshelfValidation(Request $request) {
         $validation = $request->validateWithBag('post', [
             'bookshelf_name' => 'required|unique:post|max:24',

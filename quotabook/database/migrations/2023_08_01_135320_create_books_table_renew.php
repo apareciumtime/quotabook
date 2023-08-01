@@ -21,7 +21,7 @@ class CreateBooksTableRenew extends Migration
             $table->string('title');
             $table->integer('page')->nullable();
             $table->string('penname')->nullable();
-            $table->text('comment');
+            $table->text('comment')->nullable();
             $table->timestamps();
         });
     }
@@ -36,6 +36,7 @@ class CreateBooksTableRenew extends Migration
         Schema::table('books', function (Blueprint $table) {
             $table->dropConstrainedForeignId('bookshelves_id');
         });
+
         Schema::dropIfExists('books');
     }
 }
