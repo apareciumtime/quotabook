@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeNullability extends Migration
+class DropBookshelfBooksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,7 @@ class ChangeNullability extends Migration
      */
     public function up()
     {
-        Schema::table('quotes', function (Blueprint $table) {
-            $table->text('comment')->nullable()->change();
-        });
+        Schema::dropIfExists('bookshelves_books');
     }
 
     /**
@@ -25,8 +23,10 @@ class ChangeNullability extends Migration
      */
     public function down()
     {
-        // Schema::table('quotes', function (Blueprint $table) {
-        //     $table->text('comment')->nullable(false)->change();
-        // });
+        Schema::create('bookshelves_books', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->integer('floor')->default(0)->nullable();
+        });
     }
 }

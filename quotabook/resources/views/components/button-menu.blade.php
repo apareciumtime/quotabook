@@ -11,9 +11,14 @@
 
         font-size: 1.58vw;
         white-space: nowrap;
+
+        transition: 0.5s;
+        transition-delay: 0.05s;
     }
 
     .button_menu_box:hover{
+        transform: translate(0.5vw, 0.5vw) rotate(2deg);
+
         border-bottom: .13vw solid var(--click, #CAC0A8);
         background: var(--click, #CAC0A8);
         color: var(--font-white, #EAEAEA);

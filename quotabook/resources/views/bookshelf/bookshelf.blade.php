@@ -49,21 +49,17 @@
         <div id="bookshelf_playground">
             <x-paginate-bar choice="bookshelf"/>
             <div id="shelf_frame">
-                    @if(count($bookshelfList) <= 0)
+                    @if(is_null($bookshelves))
                         <div class="alert-no-shelf">
                             ยังไม่มีชั้นวางหนังสือ
                         </div>
-                        @else
-                            @foreach($bookshelfList as $bookshelf)
-                                @foreach($bookcounts as $bookcount)
-                                    @if($bookcount->bookshelf_name === $bookshelf->bookshelf_name)
-                                    <div class="grid_item">
-                                        <x-bookshelf-item id="{{ $bookshelf->id }}" bookAmount="{{$bookcount->total_books}}"/>
-                                    </div>
-                                    @endif
-                                @endforeach
-                            @endforeach
-                        @endif
+                    @else
+                        @foreach ($bookshelves as $bookshelf)
+                            <div class="grid_item">
+                                <x-bookshelf-item id="{{ $bookshelf->id }}"/>
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
         </div>
 @endsection

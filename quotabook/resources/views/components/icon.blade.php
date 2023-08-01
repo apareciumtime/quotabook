@@ -1,4 +1,43 @@
 <style>
+    /* quote_bar_icon_ */
+    .quote_bar_icon_m {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: .8vw;
+
+        background: #FFF;
+        border-radius: .8vw;
+        border: .26vw solid var(--click, #CAC0A8);
+        width: 1.85vw;
+        height: 1.85vw;
+        fill: #CAC0A8;
+        margin:0px;
+
+        transition: 0.25s;
+        transition-delay: 0.05s;
+    }
+
+    .quote_bar_icon_s {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: .26vw 0vw;
+
+        background: #FFF;
+        border-radius: .26vw;
+        border: .13vw solid var(--click, #CAC0A8);
+        fill: #CAC0A8;
+
+        transition: 0.25s;
+        transition-delay: 0.05s;
+    }
+
+
+    /* icon_frame_ */
     .icon_frame_m {
         display: flex;
         justify-content: center;
@@ -6,10 +45,28 @@
         padding: .26vw;
         margin:0px;
 
+        transition: 0.25s;
+        transition-delay: 0.05s;
         /* background: blue; */
     }
 
+    .icon_frame_s {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.85vw;
+        height: 1.32vw;
+
+        transition: 0.25s;
+        transition-delay: 0.05s;
+        /* background: blue; */
+    }
+
+
+    /* hover, active m */
     .quote_bar_icon_m:hover{
+        width: 2.11vw;
+        height: 2.11vw;
         background: var(--click, #CAC0A8);
     }
 
@@ -27,16 +84,7 @@
         fill: var(--font-white, #CAC0A8);
     }
 
-    .icon_frame_s {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 1.85vw;
-        height: 1.32vw;
-
-        /* background: blue; */
-    }
-
+    /* hover, active s */
     .quote_bar_icon_s:hover{
         background: var(--click, #CAC0A8);
     }
@@ -55,35 +103,6 @@
         fill: var(--font-white, #CAC0A8);
     }
 
-    .quote_bar_icon_m {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        padding: .8vw;
-
-        background: #FFF;
-        border-radius: .8vw;
-        border: .26vw solid var(--click, #CAC0A8);
-        width: 1.85vw;
-        height: 1.85vw;
-        fill: #CAC0A8;
-        margin:0px;
-    }
-
-    .quote_bar_icon_s {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding: .26vw 0vw;
-
-        background: #FFF;
-        border-radius: .26vw;
-        border: .13vw solid var(--click, #CAC0A8);
-        fill: #CAC0A8;
-    }
 </style>
 
 <a href="{{route($link_to, $id)}}">

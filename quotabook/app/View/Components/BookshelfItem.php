@@ -12,17 +12,15 @@ class BookshelfItem extends Component
 
     public $bookshelf;
     public $bookAmount;
-    public $bookcounts;
-    public $test;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($id, $bookAmount)
+    public function __construct($id)
     {
         $this->bookshelf = BookShelf::find($id);
-        $this->bookAmount = $bookAmount;
+        $this->bookAmount = $this->bookshelf->book_amount;
     }
 
     /**

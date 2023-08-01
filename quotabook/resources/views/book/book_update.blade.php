@@ -60,9 +60,14 @@
     }
 
     .input_unit h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
         font-size: 1.05vw;
-        text-align: right;
+        margin: 0;
         color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
+        /* background: blue; */
     }
 
     .input_input {
@@ -75,7 +80,7 @@
     .input_input input {
         width: 100%;
         height: 100%;
-        padding: 0.52vw 0.92vw;
+        padding: 0.79vw 0.92vw;
         outline: none;
 
         font-family: "K2D";
@@ -86,7 +91,7 @@
     }
 
     .input_input textarea {
-        padding: 0.52vw 0.92vw;
+        padding: 0.79vw 0.92vw;
         outline: none;
 
         font-family: "K2D";

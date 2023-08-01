@@ -10,7 +10,7 @@
         /* background: pink; */
     }
 
-    .book_frame {
+    .info_frame {
         display: flex;
         padding: 4.23vw 1.05vw;
         flex-direction: column;
@@ -48,12 +48,14 @@
     }
 
     .info_frame ul {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 11.37vw 16.93vw;
+        grid-row-gap: 0.48vw;
+        /* flex-direction: column; */
         padding: 2.11vw 4.23vw;
-        justify-content: center;
+        /* justify-content: center;
         align-items: flex-start;
-        align-self: stretch;
+        align-self: stretch; */
         margin: 0;
         /* background: blueviolet; */
         font-size: 1.19vw;
@@ -71,9 +73,30 @@
             <div class="info_frame">
                 <h2>info</h2>
                 <ul>
+                    <li>Created at:</li>
                     <li>{{ $book->created_at }}</li>
-                    <li>{{ $book->pages }}</li>
+                    <li>Book Shelf:</li>
+                    <li>BookShelf Name</li>
+                    <li>Pages:</li>
+                    <li>{{ $book->page }}</li>
+                    <li>Publisher:</li>
                     <li>{{ $book->publisher }}</li>
+                    <li>Author:</li>
+                    <li>{{ $book->author }}</li>
+                    <li>Translator:</li>
+                    <li>{{ $book->translator }}</li>
+                    <li>Original Language:</li>
+                    <li>{{ $book->ori_lan }}</li>
+                    <li>Book Language:</li>
+                    <li>{{ $book->trans_lan }}</li>
+                    <li>ISBN:</li>
+                    <li>{{ $book->ISBN }}</li>
+                    <li>Edition:</li>
+                    <li>{{ $book->edition }}</li>
+                    <li>Artist:</li>
+                    <li>{{ $book->artist }}</li>
+                    <li>Details:</li>
+                    <li>{{ $book->details }}</li>
                 </ul>
             </div>
         </div>

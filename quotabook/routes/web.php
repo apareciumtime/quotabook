@@ -60,16 +60,17 @@ Route::get('book/{id}', [BookController::class,'getBookDetail'])->name('book_det
 
 
 // BookShelf Routes
-Route::get('/book_shelf', [BookShelfController::class, 'index'])->name('book_shelf');
+Route::get('/book_shelf', [BookShelfController::class, 'getBookShelf'])->name('book_shelf');
     //Create
-Route::get('/book_shelf/create', [BookShelfController::class, 'create'])->name('book_shelf_create');
-Route::post('/book_shelf/create/post', [BookshelfController::class,'postBookshelfCreate'])->name('book_shelf_create_post');
+Route::get('/book_shelf/create', [BookShelfController::class, 'getBookShelfCreate'])->name('book_shelf_create');
+Route::post('/book_shelf/create/post', [BookShelfController::class,'postBookshelfCreate'])->name('book_shelf_create_post');
     //Update
-Route::get('/book_shelf/update', [BookShelfController::class, 'update'])->name('book_shelf_update');
+Route::get('book_shelf/update/{id}', [BookShelfController::class,'getBookShelfUpdate'])->name('book_shelf_update');
+Route::post('book_shelf/update/post/{id}', [BookShelfController::class,'postBookShelfUpdate'])->name('book_shelf_update_post');
     //Delete
-Route::get('/book_shelf/delete', [BookShelfController::class, 'destroy'])->name('book_shelf_delete');
+Route::get('/book_shelf/delete', [BookShelfController::class, 'getBookDelete'])->name('book_shelf_delete');
     //Detail
-Route::get('/book_shelf/{id}', [BookShelfController::class, 'show'])->name('book_shelf_detail');
+Route::get('/book_shelf/{id}', [BookShelfController::class, 'getBookShelfDetail'])->name('book_shelf_detail');
 
 
 // Writing Routes

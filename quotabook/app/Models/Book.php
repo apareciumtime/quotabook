@@ -11,6 +11,6 @@ class Book extends Model
 
     public function bookshelf()
 {
-    return $this->belongsTo(BookShelf::class);
+    return $this->hasOne(BookShelf::class);
 }
 }

@@ -35,7 +35,7 @@ class UpdateQuoteTableBookTable extends Migration
      */
     public function down()
     {
-        Schema::table('bookshelves', function (Blueprint $table) {
+        Schema::table('quotes', function (Blueprint $table) {
             $table->dropForeign(['user_id']);
             $table->dropForeign(['book_id']);
             $table->text('page')->change();

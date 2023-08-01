@@ -10,7 +10,7 @@ class Bookshelf extends Model
     use HasFactory;
 
     public function books(){
-        return $this->hasMany(Book::class);
+        return $this->belongsToMany(Book::class);
     }
 }
 

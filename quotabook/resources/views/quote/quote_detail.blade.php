@@ -48,12 +48,14 @@
     }
 
     .info_frame ul {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 11.37vw 16.93vw;
+        grid-row-gap: 0.48vw;
+        /* flex-direction: column; */
         padding: 2.11vw 4.23vw;
-        justify-content: center;
+        /* justify-content: center;
         align-items: flex-start;
-        align-self: stretch;
+        align-self: stretch; */
         margin: 0;
         /* background: blueviolet; */
         font-size: 1.19vw;
@@ -71,14 +73,33 @@
             </div>
             <div class="info_frame">
                 <h2>Comment</h2>
-                <p>{{ $quote->comment }}</p>
+                @if(is_null($quote->comment))
+                    <p>No comment</p>
+                @else
+                    <p>{{ $quote->comment }}</p>
+                @endif
             </div>
             <div class="info_frame">
                 <h2>info</h2>
                 <ul>
+                    <li>Created at:</li>
                     <li>{{ $quote->created_at }}</li>
+                    <li>Book:</li>
+                    <li>{{ $book->title }}</li>
+                    <li>Chapter:</li>
                     <li>{{ $quote->chapter }}</li>
+                    <li>Page:</li>
                     <li>{{ $quote->page }}</li>
+                    <li>Author:</li>
+                    <li>{{ $book->author }}</li>
+                    <li>Translator:</li>
+                    <li>{{ $book->translator }}</li>
+                    <li>Original Language:</li>
+                    <li>{{ $book->ori_lan }}</li>
+                    <li>Book Language:</li>
+                    <li>{{ $book->trans_lan }}</li>
+                    <li>Publisher:</li>
+                    <li>{{ $book->publisher }}</li>
                 </ul>
             </div>
         </div>
