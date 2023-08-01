@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RenameBookshelvesToBookshelvesBooksTable extends Migration
+class UpdateQuotesTableAddBooksIdForeignKey extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class RenameBookshelvesToBookshelvesBooksTable extends Migration
      */
     public function up()
     {
-        Schema::rename('bookshelves', 'bookshelves_books');
-        
+        Schema::table('quotes', function (Blueprint $table) {
+            $table->foreignId('books_id')->after('comment')->constrained();
+        });
     }
 
     /**
@@ -24,6 +25,8 @@ class RenameBookshelvesToBookshelvesBooksTable extends Migration
      */
     public function down()
     {
-        Schema::rename('bookshelves_books', 'bookshelves');
+        Schema::table('quotes', function (Blueprint $table) {
+            $table->dropConstrainedForeignId('books_id');
+        });
     }
 }

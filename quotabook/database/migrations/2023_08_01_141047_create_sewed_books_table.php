@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RenameBookshelvesToBookshelvesBooksTable extends Migration
+class CreateSewedBooksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class RenameBookshelvesToBookshelvesBooksTable extends Migration
      */
     public function up()
     {
-        Schema::rename('bookshelves', 'bookshelves_books');
-        
+        Schema::create('sewed_books', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,6 +26,6 @@ class RenameBookshelvesToBookshelvesBooksTable extends Migration
      */
     public function down()
     {
-        Schema::rename('bookshelves_books', 'bookshelves');
+        Schema::dropIfExists('sewed_books');
     }
 }
