@@ -28,11 +28,12 @@ class BookController extends Controller
         ]);
 
         $common_book = new CommonBook();
-        $common_book->publisher = $request->title;
+        // $common_book->publisher = $request->;
 
-        $book = new Book();
+        $book = new CommonBook();
         $book->title = $request->title;
         $book->pages = $request->pages;
+
         $book->publisher = $request->publisher;
         $book->edition = $request->edition;
         $book->ISBN = $request->ISBN;

@@ -22,7 +22,7 @@ class BookshelfSeeder extends Seeder
         // ]);
         DB::table('bookshelves')->insert([
             'name' => 'pf0qPI4THC',
-            'books_count'=>1,
+            'books_count'=>2,
         ]);
         
        

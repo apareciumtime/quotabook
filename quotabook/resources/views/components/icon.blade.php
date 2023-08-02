@@ -205,5 +205,6 @@
                 </svg>
             </div>
         </div>
+    @elseif ($icon === "addshelf")
     @endif
 </a>

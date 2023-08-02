@@ -25,14 +25,16 @@ class BookShelfController extends Controller
     }
 
     public function getBookShelfDetail($id) {
-
+        $bookshelves = BookShelf::find($id);
+        return view('bookshelf.bookshelf_detail')
+        ->with('bookshelves', $bookshelves);
     }
 
     public function getBookShelfCreate() {
-        $books = Book::all();
+        $bookshelves = BookShelf::all();
 
         return view('bookshelf.bookshelf_create')
-        ->with('books', $books);
+        ->with('bookshelves', $bookshelves);
     }
     public function postBookShelfCreate(Request $request) {
         $validation = $request->validateWithBag('post', [
