@@ -19,7 +19,7 @@ class QuoteItem extends Component
     public function __construct($id)
     {
         $this->quote = Quote::find($id);
-        $this->book = CommonBook::where('id', $this->quote->books_id)->first();
+        $this->book = Book::where('id', $this->quote->books_id)->first();
     }
 
     /**

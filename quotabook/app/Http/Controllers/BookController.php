@@ -15,8 +15,10 @@ class BookController extends Controller
 
     public function getBookDetail($id) {
         $book = Book::find($id);
+        $common_book = CommonBook::find($book->common_books_id);
         return view('book.book_detail')
-        ->with('book', $book);
+        ->with('book', $book)
+        ->with('book_detail', $common_book);
     }
 
     public function getBookCreate() {
@@ -31,17 +33,17 @@ class BookController extends Controller
         $common_book->publisher = $request->publisher;
         $common_book->edition = $request->edition;
         $common_book->isbn = $request->isbn;
-        $common_book->ori_lan = $request->ori_lan;
+        $common_book->org_lang = $request->org_lang;
         $common_book->author = $request->author;
-        $common_book->trans_lan = $request->trans_lan;
+        $common_book->trans_lang = $request->trans_lang;
         $common_book->translator = $request->translator;
-        $common_book->artist = $request->artist;
+        $common_book->painter = $request->painter;
         // $book->user_id = Auth::id();
         $common_book->save();
 
         $book = new Book();
         $book->title = $request->title;
-        $book->pages = $request->pages;
+        $book->page = $request->page;
         $book->common_books_id = $common_book->id;
         $book->save();
 
@@ -63,19 +65,21 @@ class BookController extends Controller
         $book = Book::findOrFail($id);
         $common_book = CommonBook::findOrFail($book->common_books_id);
         $book->title = $request->title;
-        $book->pages = $request->pages;
-        $book->publisher = $request->publisher;
-        $book->edition = $request->edition;
-        $book->ISBN = $request->ISBN;
-        $book->ori_lan = $request->ori_lan;
-        $book->author = $request->author;
-        $book->trans_lan = $request->trans_lan;
-        $book->translator = $request->translator;
-        $book->artist = $request->artist;
-        $book->details = $request->details;
+        $book->page = $request->page;
+
+        $common_book->publisher = $request->publisher;
+        $common_book->edition = $request->edition;
+        $common_book->isbn = $request->ISBN;
+        $common_book->org_lang = $request->org_lang;
+        $common_book->author = $request->author;
+        $common_book->trans_lang = $request->trans_lang;
+        $common_book->translator = $request->translator;
+        $common_book->painter = $request->painter;
+        $common_book->details = $request->details;
         // $quote->user_id = Auth::id();
 
         $book->save();
+        $common_book->save();
 
         return redirect()->route('book_detail', $book->id);
     }
@@ -83,9 +87,10 @@ class BookController extends Controller
 
     public function getBookDelete($id) {
         $book = Book::findOrFail($id);
-
+        $common_book = CommonBook::findOrFail($book->common_books_id);
 
         $book->delete();
+        $common_book->delete();
 
         return redirect()->route('book');
     }

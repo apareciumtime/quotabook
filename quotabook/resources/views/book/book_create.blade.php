@@ -158,9 +158,9 @@
                 </div>
             </div>
             <div class="input_unit">
-                <h2>Pages</h2>
+                <h2>Page</h2>
                 <div class="input_input">
-                    <input name="pages" type="number" placeholder="Pages">
+                    <input name="page" type="number" placeholder="Page">
                 </div>
             </div>
             <div class="input_unit">
@@ -184,7 +184,7 @@
             <div class="input_unit">
                 <h2>Original Language</h2>
                 <div class="input_input">
-                    <input name="ori_lan" type="text" placeholder="Original Language">
+                    <input name="org_lang" type="text" placeholder="Original Language">
                 </div>
             </div>
             <div class="input_unit">
@@ -196,7 +196,7 @@
             <div class="input_unit">
                 <h2>Translation Language</h2>
                 <div class="input_input">
-                    <input name="trans_lan" type="text" placeholder="Translation Language">
+                    <input name="trans_lang" type="text" placeholder="Translation Language">
                 </div>
             </div>
             <div class="input_unit">
@@ -206,9 +206,9 @@
                 </div>
             </div>
             <div class="input_unit">
-                <h2>Artist</h2>
+                <h2>Painter</h2>
                 <div class="input_input">
-                    <input name="artist" type="text" placeholder="Artist">
+                    <input name="painter" type="text" placeholder="Painter">
                 </div>
             </div>
             <div class="input_unit">

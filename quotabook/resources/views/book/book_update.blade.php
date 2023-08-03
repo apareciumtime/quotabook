@@ -158,63 +158,63 @@
                 </div>
             </div>
             <div class="input_unit">
-                <h2>Pages</h2>
+                <h2>Page</h2>
                 <div class="input_input">
-                    <input name="pages" type="number" placeholder="Pages" value="{{ $book->pages }}">
+                    <input name="page" type="number" placeholder="Page" value="{{ $book->page }}">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Publisher</h2>
                 <div class="input_input">
-                    <input name="publisher" type="text" placeholder="Publisher" value="{{ $book->publisher }}">
+                    <input name="publisher" type="text" placeholder="Publisher" value="{{ $book_detail->publisher }}">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Edition</h2>
                 <div class="input_input">
-                    <input name="edition" type="text" placeholder="Edition" value="{{ $book->edition }}">
+                    <input name="edition" type="text" placeholder="Edition" value="{{ $book_detail->edition }}">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>ISBN</h2>
                 <div class="input_input">
-                    <input name="ISBN" type="text" placeholder="ISBN" value="{{ $book->ISBN }}">
+                    <input name="isbn" type="text" placeholder="isbn" value="{{ $book_detail->isbn }}">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Original Language</h2>
                 <div class="input_input">
-                    <input name="ori_lan" type="text" placeholder="Original Language" value="{{ $book->ori_lan }}">
+                    <input name="org_lang" type="text" placeholder="Original Language" value="{{ $book_detail->org_lan }}">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Author(s)</h2>
                 <div class="input_input">
-                    <input name="author" type="text" placeholder="Author(s)" value="{{ $book->author }}">
+                    <input name="author" type="text" placeholder="Author(s)" value="{{ $book_detail->author }}">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Translation Language</h2>
                 <div class="input_input">
-                    <input name="trans_lan" type="text" placeholder="Translation Language" value="{{ $book->trans_lan }}">
+                    <input name="trans_lang" type="text" placeholder="Translation Language" value="{{ $book_detail->trans_lan }}">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Translator</h2>
                 <div class="input_input">
-                    <input name="translator" type="text" placeholder="Translator" value="{{ $book->translator }}">
+                    <input name="translator" type="text" placeholder="Translator" value="{{ $book_detail->translator }}">
                 </div>
             </div>
             <div class="input_unit">
-                <h2>Artist</h2>
+                <h2>Painter</h2>
                 <div class="input_input">
-                    <input name="artist" type="text" placeholder="Artist" value="{{ $book->artist }}">
+                    <input name="painter" type="text" placeholder="Painter" value="{{ $book_detail->painter }}">
                 </div>
             </div>
             <div class="input_unit">
                 <h2>Details</h2>
                 <div class="input_input">
-                    <textarea name="details" placeholder="Details" cols="47" rows="5">{{ $book->details }}</textarea>
+                    <textarea name="details" placeholder="Details" cols="47" rows="5">{{ $book_detail->details }}</textarea>
                 </div>
             </div>
             <div class="svg_container">

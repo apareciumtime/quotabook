@@ -50,7 +50,7 @@ Route::get('quote/{id}', [QuoteController::class,'getQuoteDetail'])->name('quote
 Route::get('book', [BookController::class,'getBook'])->name('book');
     // Create
 Route::get('book/create', [BookController::class,'getBookCreate'])->name('book_create');
-Route::post('book/create/post', [BookController::class,'postBookCreate'])->name('book_create_post');
+Route::post('book/create/post', [BookController::class,'postCommonBookCreate'])->name('book_create_post');
     // Update
 Route::get('book/update/{id}', [BookController::class,'getBookUpdate'])->name('book_update');
 Route::post('book/update/post/{id}', [BookController::class,'postBookUpdate'])->name('book_update_post');

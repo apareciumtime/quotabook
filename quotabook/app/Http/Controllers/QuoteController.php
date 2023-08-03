@@ -18,7 +18,7 @@ class QuoteController extends Controller
     public function getQuoteDetail($id) {
         $quote = Quote::find($id);
         $book = Book::where('id', $quote->books_id)->first();
-        $book_detail = CommonBook::where('id', $book->id)->first();
+        $book_detail = CommonBook::where('id', $book->common_books_id)->first();
         return view('quote.quote_detail')
         ->with('quote', $quote)
         ->with('book', $book)
@@ -67,7 +67,7 @@ class QuoteController extends Controller
     }
     public function getQuoteUpdate($id) {
         $quote = Quote::find($id);
-        $book = Book::where('id', $quote->book_id)->first();
+        $book = Book::where('id', $quote->books_id)->first();
         $books = Book::all();
         return view('quote.quote_update')
         ->with('quote', $quote)

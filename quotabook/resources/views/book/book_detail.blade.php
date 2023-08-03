@@ -80,23 +80,23 @@
                     <li>Pages:</li>
                     <li>{{ $book->page }}</li>
                     <li>Publisher:</li>
-                    <li>{{ $book->publisher }}</li>
+                    <li>{{ $book_detail->publisher }}</li>
                     <li>Author:</li>
-                    <li>{{ $book->author }}</li>
+                    <li>{{ $book_detail->author }}</li>
                     <li>Translator:</li>
-                    <li>{{ $book->translator }}</li>
+                    <li>{{ $book_detail->translator }}</li>
                     <li>Original Language:</li>
-                    <li>{{ $book->ori_lan }}</li>
+                    <li>{{ $book_detail->org_lang }}</li>
                     <li>Book Language:</li>
-                    <li>{{ $book->trans_lan }}</li>
+                    <li>{{ $book_detail->trans_lang }}</li>
                     <li>ISBN:</li>
-                    <li>{{ $book->ISBN }}</li>
+                    <li>{{ $book_detail->isbn }}</li>
                     <li>Edition:</li>
-                    <li>{{ $book->edition }}</li>
-                    <li>Artist:</li>
-                    <li>{{ $book->artist }}</li>
+                    <li>{{ $book_detail->edition }}</li>
+                    <li>Painter:</li>
+                    <li>{{ $book_detail->painter }}</li>
                     <li>Details:</li>
-                    <li>{{ $book->details }}</li>
+                    <li>{{ $book_detail->details }}</li>
                 </ul>
             </div>
         </div>
