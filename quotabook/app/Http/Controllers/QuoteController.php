@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\CommonBook;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
@@ -16,10 +17,12 @@ class QuoteController extends Controller
 
     public function getQuoteDetail($id) {
         $quote = Quote::find($id);
-        $book = Book::where('id', $quote->book_id)->first();
+        $book = Book::where('id', $quote->books_id)->first();
+        $book_detail = CommonBook::where('id', $book->id)->first();
         return view('quote.quote_detail')
         ->with('quote', $quote)
-        ->with('book', $book);
+        ->with('book', $book)
+        ->with('book_detail', $book_detail);
     }
 
     public function getQuoteCreate() {
@@ -30,26 +33,30 @@ class QuoteController extends Controller
         $validation = $request->validateWithBag('post', [
             'quote' => ['required'],
             'book' => ['required'],
-            'chapter' => ['required'],
-            'page' => ['required'],
         ]);
 
         $quote = new Quote();
         $quote->quote = $request->quote;
-        $quote->chapter = $request->chapter;
-        $quote->page = $request->page;
 
         $bookTitle = $request->book;
         $book = Book::where('title', $bookTitle)->first();
         if (!$book) {
             $book = new Book();
+            $common_book = new CommonBook;
+            $common_book->save();
             $book->title = $bookTitle;
+            $book->common_books_id = $common_book->id;
             $book->save();
         }
-        $quote->book_id = $book->id;
+        $quote->books_id = $book->id;
 
-        $quote->user_id = Auth::id();
-
+        // $quote->user_id = Auth::id();
+        if ($request->has('chapter')) {
+            $quote->chapter = $request->chapter;
+        }
+        if ($request->has('page')) {
+            $quote->page_at = $request->page_at;
+        }
         if ($request->has('comment')) {
             $quote->comment = $request->comment;
         }
@@ -72,26 +79,30 @@ class QuoteController extends Controller
         $validation = $request->validateWithBag('post', [
             'quote' => ['required'],
             'book' => ['required'],
-            'chapter' => ['required'],
-            'page' => ['required'],
         ]);
 
         $quote = Quote::findOrFail($id);
         $quote->quote = $request->quote;
-        $quote->chapter = $request->chapter;
-        $quote->page = $request->page;
 
         $bookTitle = $request->book;
         $book = Book::where('title', $bookTitle)->first();
         if (!$book) {
             $book = new Book();
+            $common_book = new CommonBook;
+            $common_book->save();
             $book->title = $bookTitle;
+            $book->common_books_id = $common_book->id;
             $book->save();
         }
-        $quote->book_id = $book->id;
+        $quote->books_id = $book->id;
 
-        $quote->user_id = Auth::id();
-
+        // $quote->user_id = Auth::id();
+        if ($request->has('chapter')) {
+            $quote->chapter = $request->chapter;
+        }
+        if ($request->has('page')) {
+            $quote->page_at = $request->page_at;
+        }
         if ($request->has('comment')) {
             $quote->comment = $request->comment;
         }

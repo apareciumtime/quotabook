@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
 use App\Models\BookShelf;
+use App\Models\Book;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB as DB;
 
@@ -11,30 +11,20 @@ class BookShelfController extends Controller
 {
     public function getBookShelf() {
         $bookshelves = Bookshelf::all();
-        $this->updateBooksCount();
+
         return view('bookshelf.bookshelf')
         ->with('bookshelves', $bookshelves);
     }
 
-    public function updateBooksCount(){
-        $bookshelves = BookShelf::all();
-        foreach($bookshelves as $bookshelf){
-            $bookshelf->books_count = DB::table('Books')->where('bookshelves_id','=',$bookshelf->id)->count();
-            $bookshelf->save();
-        }
-    }
-
     public function getBookShelfDetail($id) {
-        $bookshelves = BookShelf::find($id);
-        return view('bookshelf.bookshelf_detail')
-        ->with('bookshelves', $bookshelves);
+
     }
 
     public function getBookShelfCreate() {
-        $bookshelves = BookShelf::all();
+        $books = Book::all();
 
         return view('bookshelf.bookshelf_create')
-        ->with('bookshelves', $bookshelves);
+        ->with('books', $books);
     }
     public function postBookShelfCreate(Request $request) {
         $validation = $request->validateWithBag('post', [
@@ -140,41 +130,11 @@ class BookShelfController extends Controller
         ->with('books', $books);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function postBookshelfValidation(Request $request) {
-        $validation = $request->validateWithBag('post', [
-            'bookshelf_name' => 'required|unique:post|max:24',
-            'floor' => ['required'],
-            'book_id' => ['unre'],
-        ]);
-    }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function postBookShelfUpdate(Request $request, $id) {
 
     }
 
     public function getQuoteDelete($id) {
 
     }
-
-    public function submitChoices(Request $request)
-{
-    $selectedBookIds = $request->input('book_choices', []);
-    
-    // Use the selectedBookIds to retrieve the selected books from the database
-    $selectedBooks = Book::whereIn('id', $selectedBookIds)->get();
-    
-    // Process the selected books as needed
-}
 }

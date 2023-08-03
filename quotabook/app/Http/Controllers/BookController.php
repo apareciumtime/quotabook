@@ -28,30 +28,31 @@ class BookController extends Controller
         ]);
 
         $common_book = new CommonBook();
-        // $common_book->publisher = $request->;
+        $common_book->publisher = $request->publisher;
+        $common_book->edition = $request->edition;
+        $common_book->isbn = $request->isbn;
+        $common_book->ori_lan = $request->ori_lan;
+        $common_book->author = $request->author;
+        $common_book->trans_lan = $request->trans_lan;
+        $common_book->translator = $request->translator;
+        $common_book->artist = $request->artist;
+        // $book->user_id = Auth::id();
+        $common_book->save();
 
-        $book = new CommonBook();
+        $book = new Book();
         $book->title = $request->title;
         $book->pages = $request->pages;
-
-        $book->publisher = $request->publisher;
-        $book->edition = $request->edition;
-        $book->ISBN = $request->ISBN;
-        $book->ori_lan = $request->ori_lan;
-        $book->author = $request->author;
-        $book->trans_lan = $request->trans_lan;
-        $book->translator = $request->translator;
-        $book->artist = $request->artist;
-        $book->details = $request->details;
-        // $book->user_id = Auth::id();
+        $book->common_books_id = $common_book->id;
         $book->save();
 
         return redirect()->route('book');
     }
     public function getBookUpdate($id) {
         $book = Book::find($id);
+        $common_book = CommonBook::find($book->common_books_id);
         return view('book.book_update')
-        ->with('book', $book);
+        ->with('book', $book)
+        ->with('book_detail', $common_book);
     }
 
     public function postBookUpdate(Request $request, $id) {
@@ -60,6 +61,7 @@ class BookController extends Controller
         ]);
 
         $book = Book::findOrFail($id);
+        $common_book = CommonBook::findOrFail($book->common_books_id);
         $book->title = $request->title;
         $book->pages = $request->pages;
         $book->publisher = $request->publisher;
@@ -81,6 +83,7 @@ class BookController extends Controller
 
     public function getBookDelete($id) {
         $book = Book::findOrFail($id);
+
 
         $book->delete();
 

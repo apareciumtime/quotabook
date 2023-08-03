@@ -179,7 +179,7 @@
             <div class="input_unit">
                 <h2>Page</h2>
                 <div class="input_input">
-                    <input name="page" type="number" placeholder="0">
+                    <input name="page_at" type="number" placeholder="0">
                 </div>
             </div>
             <div class="svg_container">

@@ -91,15 +91,15 @@
                     <li>Page:</li>
                     <li>{{ $quote->page }}</li>
                     <li>Author:</li>
-                    <li>{{ $book->author }}</li>
+                    <li>{{ $book_detail->author }}</li>
                     <li>Translator:</li>
-                    <li>{{ $book->translator }}</li>
+                    <li>{{ $book_detail->translator }}</li>
                     <li>Original Language:</li>
-                    <li>{{ $book->ori_lan }}</li>
+                    <li>{{ $book_detail->ori_lan }}</li>
                     <li>Book Language:</li>
-                    <li>{{ $book->trans_lan }}</li>
+                    <li>{{ $book_detail->trans_lan }}</li>
                     <li>Publisher:</li>
-                    <li>{{ $book->publisher }}</li>
+                    <li>{{ $book_detail->publisher }}</li>
                 </ul>
             </div>
         </div>

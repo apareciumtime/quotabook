@@ -179,7 +179,7 @@
             <div class="input_unit">
                 <h2>Page</h2>
                 <div class="input_input">
-                    <input name="page" value="{{ $quote->page }}" type="number" placeholder="Page">
+                    <input name="page_at" value="{{ $quote->page }}" type="number" placeholder="Page">
                 </div>
             </div>
             <div class="svg_container">

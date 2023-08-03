@@ -5,20 +5,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4.23vw;
+    gap: 2.11vw;
     align-self: stretch;
 
     /* border:1px red solid; */
 }
 
-.bookshelf_form_frame{
+.bookshelf_form_frame {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    gap: 1.05vw;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 
-    /* border:1px red solid; */
+    gap: 1.05vw;
+    /* background: pink; */
+}
+
+.bookshelf_form_frame form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    gap: 1.05vw;
+    /* background: green; */
 }
 
 .topic{
@@ -91,30 +107,6 @@
     border: 0.13vw solid var(--click, #CAC0A8);
 }
 
-.bookshelf_form_frame {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    margin-top: 2.11vw;
-
-    /* background: pink; */
-}
-
-.bookshelf_form_frame form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-    padding: 0;
-    margin: 0;
-
-    gap: 1.05vw;
-    /* background: green; */
-}
     .input_unit {
         display: grid;
         grid-template-columns: 29.49vw 23vw 28.43vw;
@@ -163,14 +155,56 @@
         flex-direction: column;
         align-items: center;
 
-        width: 100%;
-        padding: 0.52vw 0;
+        width: 23vw;
+        padding: 1.05vw 0;
         margin: 0;
+        margin-left: 1.05vw;
 
-        gap: 1.05vw;
+        gap: 0.52vw;
         /* background: green; */
         border-top: 0.13vw solid var(--click, #CAC0A8);
         border-bottom: 0.13vw solid var(--click, #CAC0A8);
+    }
+
+    .book_added {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 20.89vw;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        gap: 0.52vw;
+        /* background: blue; */
+    }
+
+    .book_added input {
+        width: 100%;
+
+        font-family: "K2D";
+        font-size: 0.79vw;
+        color: var(--font-secondary-black, rgba(14, 14, 14, 0.50));
+
+        border: none;
+    }
+
+    .no_book {
+        padding: 0;
+        margin: 0;
+        font-family: "K2D";
+        font-size: 0.79vw;
+        color: var(--click, #CAC0A8);
+    }
+
+    .book_added button {
+        font-family: "K2D";
+        font-size: 0.79vw;
+        color: var(--click, #CAC0A8);
+
+        cursor: pointer;
+        border: none;
     }
 
     .submit {
@@ -233,7 +267,9 @@
                     <input required name="f1books[]" type="text" placeholder="Select or create new book" list="books">
                 </div>
             </div>
-            <div class="additional_books" id="additional_books1" data-floor="1"></div>
+            <div class="additional_books" id="additional_books1" data-floor="1">
+                <h2 class="no_book">There's no book in this floor</h2>
+            </div>
             <button class="add_book" data-floor="1" type="button">Add Book</button>
 
             <div class="input_unit">
@@ -242,7 +278,9 @@
                     <input required name="f2books[]" type="text" placeholder="Select or create new book" list="books">
                 </div>
             </div>
-            <div class="additional_books" id="additional_books2" data-floor="2"></div>
+            <div class="additional_books" id="additional_books2" data-floor="2">
+                <h2 class="no_book">There's no book in this floor</h2>
+            </div>
             <button class="add_book" data-floor="2" type="button">Add Book</button>
 
             <div class="input_unit">
@@ -251,11 +289,13 @@
                     <input required name="f3books[]" type="text" placeholder="Select or create new book" list="books">
                 </div>
             </div>
-            <div class="additional_books" id="additional_books3" data-floor="3"></div>
+            <div class="additional_books" id="additional_books3" data-floor="3">
+                <h2 class="no_book">There's no book in this floor</h2>
+            </div>
             <button class="add_book" data-floor="3" type="button">Add Book</button>
 
             <datalist id="books">
-                @if (is_null($books))
+                @if (count($books) > 0)
                     @foreach ($books as $book)
                         <option value="{{ $book->title }}">
                     @endforeach
@@ -265,20 +305,12 @@
             <button type="submit" class="submit">Save</button>
         </div>
         </form>
-
     </div>
 
-
-    
-
-    
-
-
-<!-- <textarea name="quote" required placeholder="" cols="47" rows="5"></textarea> -->
 </div>
 <script>
     $(document).ready(function() {
-        var bookCounts = [1, 1, 1];
+        var bookCounts = [0, 0, 0];
         $(".add_book").click(function() {
             var floor = $(this).data("floor");
 
@@ -287,15 +319,18 @@
                 var bookCount = bookCounts[floor - 1];
 
                 var additionalBook = `
-                    <div class="input_unit">
-                        <h2></h2>
-                        <div class="input_input">
-                            <input required name="f${floor}books[]" type="text" placeholder="Select or create new book" list="books">
+                    <div class="book_added">
+                        <div class="svg_container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none">
+                                <path d="M1.42857 6.42815C0.638393 6.42815 0 7.06655 0 7.85672C0 8.6469 0.638393 9.2853 1.42857 9.2853H18.5714C19.3616 9.2853 20 8.6469 20 7.85672C20 7.06655 19.3616 6.42815 18.5714 6.42815H1.42857ZM1.42857 0.713867C0.638393 0.713867 0 1.35226 0 2.14244C0 2.93262 0.638393 3.57101 1.42857 3.57101H18.5714C19.3616 3.57101 20 2.93262 20 2.14244C20 1.35226 19.3616 0.713867 18.5714 0.713867H1.42857Z" fill="#CAC0A8"/>
+                            </svg>
                         </div>
+                        <input required name="f${floor}books[]" type="text" value="Book 1" readonly>
                         <button type="button" class="remove_book" data-book-count="${bookCount}" data-floor="${floor}">Remove</button>
                     </div>
                 `;
 
+                $(`#additional_books${floor} .no_book`).remove();
                 $(`#additional_books${floor}`).append(additionalBook);
             } else {
                 alert("The shelf is full");
@@ -303,13 +338,17 @@
         });
 
         $(".additional_books").on("click", ".remove_book", function() {
-            var bookCountToRemove = $(this).data("book-count");
             var floor = $(this).data("floor");
+            $(this).closest(".book_added").remove();
+            bookCounts[floor - 1]--;
 
-            if (bookCountToRemove > 1) {
-                $(this).closest(".input_unit").remove();
-                bookCounts[floor - 1]--;
+            if (bookCounts[floor - 1] == 0) {
+                var noBook = `
+                    <h2 class="no_book">There's no book in this floor</h2>
+                `;
+                $(`#additional_books${floor}`).append(noBook);
             }
+
         });
     });
 </script>

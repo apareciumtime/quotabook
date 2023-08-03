@@ -5,6 +5,7 @@ namespace App\View\Components;
 use Illuminate\View\Component;
 use App\Models\Quote;
 use App\Models\Book;
+use App\Models\CommonBook;
 
 class QuoteItem extends Component
 {
@@ -18,7 +19,7 @@ class QuoteItem extends Component
     public function __construct($id)
     {
         $this->quote = Quote::find($id);
-        $this->book = Book::where('id', $this->quote->book_id)->first();
+        $this->book = CommonBook::where('id', $this->quote->books_id)->first();
     }
 
     /**
