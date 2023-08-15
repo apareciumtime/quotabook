@@ -107,10 +107,9 @@
 </style>
 
 <div class="bookshelf_item_area">
-    <a href="{{route('book_shelf_detail', '$bookshelf->id')}}" class="bookshelf_item_area_a">
+    <a href="{{route('book_shelf_detail', $bookshelf->id)}}" class="bookshelf_item_area_a">
         <div class="bookshelf_item_topic">
             {{$bookshelf->name}}
-            {{$bookAmount}}
         </div>
         <div class="bookshelf_item_body">
                 @if($bookAmount >= 39)
@@ -367,7 +366,7 @@
                             <rect y=".31vw" width="1.05vw" height="6.34vw" rx="2" transform="rotate(-15 0 4.70612)" fill="#CAC0A8"/>
                         </svg>
                     </div>
-                    
+
                     <div class="floor_left">
                         <svg width="1.05vw" height="6.34vw" viewBox="0 0 1.05vw 6.34vw" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="1.05vw" height="6.34vw" rx="2" fill="#FFF"/>
@@ -406,8 +405,8 @@
     </div>
 
     <div class="icon_list">
-        <x-icon icon=delete model="bookshelf"/>
-        <x-icon icon=edit model="bookshelf"/>
+        <x-icon icon=delete model="bookshelf" id="{{ $bookshelf->id }}" />
+        <x-icon icon=edit model="bookshelf" id="{{ $bookshelf->id }}" />
         <x-icon icon=create model="bookshelf"/>
     </div>
 

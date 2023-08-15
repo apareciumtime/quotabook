@@ -16,12 +16,12 @@
         display: grid;
 
         grid-template-columns: 19.97vw 19.97vw 19.97vw 19.97vw;
-        grid-template-rows: 28.6vw;
+        /* grid-template-rows: 28.6vw; */
         justify-items: center;
         gap:1vw;
         align-self:stretch;
         /* border: 1px solid rgba(0, 0, 0, 0.8); */
-        position: relative;
+        /* position: relative; */
     }
 
     .grid_item{

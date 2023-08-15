@@ -69,7 +69,7 @@ Route::post('/submit_choices', [BookShelfController::class, 'submitChoices'])->n
 Route::get('book_shelf/update/{id}', [BookShelfController::class,'getBookShelfUpdate'])->name('book_shelf_update');
 Route::post('book_shelf/update/post/{id}', [BookShelfController::class,'postBookShelfUpdate'])->name('book_shelf_update_post');
     //Delete
-Route::get('/book_shelf/delete', [BookShelfController::class, 'getBookDelete'])->name('book_shelf_delete');
+Route::get('/book_shelf/delete/{id}', [BookShelfController::class, 'getBookShelfDelete'])->name('book_shelf_delete');
     //Detail
 Route::get('/book_shelf/{id}', [BookShelfController::class, 'getBookShelfDetail'])->name('book_shelf_detail');
 
